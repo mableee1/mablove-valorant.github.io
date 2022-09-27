@@ -1,0 +1,262 @@
+/* --columbia-blue: #c9f0ffff;
+--azure-x-11-web-color: #eafffdff;
+--cultured: #efeff0ff;
+--languid-lavender: #d5cad6ff;
+--old-lavender: #6b5e62ff;
+ */
+/*ТЭГИ*/
+body {
+    margin: 0px;
+    background-color: #efeff0ff;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+nav {
+    display: flex;
+    justify-content: flex-start;
+}
+nav a {
+    text-decoration: none;
+}
+nav li {
+    list-style-type: none;
+}
+nav li a {
+    text-transform: uppercase;
+    color: #efeff0ff;
+}
+.menuOptionHover {
+    color: #f94353 !important;
+    transition: all .5s ease-out;
+}
+/* КЛАССЫ */
+.navContainer {
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    background-color: #0D1B23;
+    z-index: 1;
+    opacity: .95;
+}
+.menuContainer { /*float*/
+    display: flex;
+    width: 50vw;
+    padding: 2vh 0 2vh 0;
+}
+.optionContainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: inherit;
+    font-weight: bold;
+}
+
+.valorantLogo {
+    width: 75px;
+    height: 50px;
+    margin-left: 5vw;
+}
+
+.agentLi a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+/* search bar */
+.searchContainer { /*calc*/
+    display: flex;
+    margin-left: auto;
+    padding: 2vh 2vw 2vh 0;
+    align-items: center;
+}
+
+.searchBar {
+    visibility: hidden;
+    background-color: transparent;
+    border: none;
+    border-bottom: .5px solid #efeff0ff;
+    color: #efeff0ff;
+    height: 5vh;
+    width: 15vw;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+.elementVisibility { /* JS: hide searchBar*/
+    visibility: visible;
+}
+
+.searchBar::placeholder {
+    font-weight: lighter;
+}
+
+.searchButton {
+    margin-left: 10px;
+    background-color: transparent;
+    border: none;
+}
+.searchButtonHover {
+    transition: all .5s ease-out;
+}
+.signupButton {
+    border-radius: 25px;
+    width: 10%;
+    height: 7vh;
+    background-color: transparent;
+    border-color: #efeff0ff;
+    border-style: solid;
+    border-width: 1px;
+    margin-top: 1.4%;
+    margin-right: 5vw;
+    font-size: 1em;
+}
+.signupButtonHover {
+    border-color: #f94353;
+    transition: all .5s ease-out;
+}
+.signupLink {
+    color: #efeff0ff;
+    text-transform: uppercase;
+}
+.pageHeader {
+    margin: 6vh 0vw 6vh 0vw;
+}
+/*icon*/
+.gg-search {
+    color: white;
+}
+/*agent group*/
+.agentListBlock{
+    display: flex;
+    flex-direction: column;
+}
+/*agent container*/
+.agentLi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2vh 0 8vh 0;
+    width: 120px;
+    height: 120px;
+    border-radius: 30px;
+    background-color: #efeff0ff;
+    box-shadow: 10px 10px 21px #d3d3d6,
+    -10px -10px 21px #fff;
+}
+.agentLi a {
+    position: relative;
+    top: 65%; /*CALCULATE THE DISTANCE IN JS*/
+    text-transform: uppercase;
+    color: #0D1B23;
+}
+
+/*agent backgrounds*/
+.brim, .kayo, .sova, .raze, .neon, .cypher, .jett, .skye, .phoenix, .fade, .breach, .yoru, .reyna, .kj, .chamber, 
+.astra, .viper, .sage, .omen {
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.brim {
+    background-image: url(https://i.pinimg.com/564x/c5/d5/20/c5d5209dee4f9dac03cfb2ef2f69148b.jpg);
+}
+.kayo {
+    background-image: url(https://i.pinimg.com/564x/0a/99/00/0a9900abc3112b3dfeb58564b9e1d424.jpg);
+}
+.sova {
+    background-image: url(https://i.pinimg.com/564x/45/a0/40/45a040df71499f5d40c0e511174982ac.jpg);
+}
+.raze {
+    background-image: url(https://i.pinimg.com/564x/6b/f2/a4/6bf2a4c6359966a99332e1599aa17a50.jpg);
+}
+.neon {
+    background-image: url(https://i.pinimg.com/564x/d5/54/ed/d554edac5f68faa56aac56fbd8dcc324.jpg);
+}
+.cypher {
+    background-image: url(https://i.pinimg.com/564x/b2/5d/b7/b25db72ea73daf90afcd7d0c2d007c8a.jpg);
+}
+.jett {
+    background-image: url(https://i.pinimg.com/564x/d9/3b/0a/d93b0a266636b3b169bf41d54bcbcb03.jpg);
+}
+.skye {
+    background-image: url(https://i.pinimg.com/564x/8d/04/6f/8d046f70b6acb9d4f417aee9695dae47.jpg);
+}
+.phoenix {
+    background-image: url(https://i.pinimg.com/564x/99/f0/a7/99f0a72762f61a25c6881da1bd41baf9.jpg);
+}
+.fade {
+    background-image: url(https://i.pinimg.com/564x/b1/72/f4/b172f4e812fe715510f4f77e15f8540d.jpg);
+}
+.breach {
+    background-image: url(https://i.pinimg.com/564x/2e/57/80/2e5780fada5e57dc316e45d399f08ab4.jpg);
+}
+.yoru {
+    background-image: url(https://i.pinimg.com/564x/2d/4d/13/2d4d130ab45ebca062e28129bc5554b2.jpg);
+}
+.reyna {
+    background-image: url(https://i.pinimg.com/564x/d8/25/c3/d825c3e7f7e246325c4f53f0c027f142.jpg);
+}
+.kj {
+    background-image: url(https://i.pinimg.com/564x/22/a5/f4/22a5f48562be1eb59df5d12637e37456.jpg);
+}
+.chamber {
+    background-image: url(https://i.pinimg.com/564x/8b/d3/5e/8bd35e3b428cb0810fc054bd98d8b698.jpg);
+}
+.astra {
+    background-image: url(https://i.pinimg.com/564x/e8/eb/1c/e8eb1c5769de5b99dcade9419a338e2e.jpg);
+}
+.viper {
+    background-image: url(https://i.pinimg.com/564x/8b/76/25/8b7625b8bf3efaeccaab7f2444b121d4.jpg);
+}
+.sage {
+    background-image: url(https://i.pinimg.com/564x/98/e8/f5/98e8f5baab33a646f315c8d5593bcee4.jpg);
+}
+.omen {
+    background-image: url(https://i.pinimg.com/564x/e6/fd/2c/e6fd2c328587e00ef998f0bf204e4f11.jpg);
+}
+/*ID*/
+
+#agentGuides {
+    padding: 16vh 5vw 6vh 5vw;
+    margin-bottom: 100px;
+    color: #0D1B23
+}
+
+#agentList {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#agentGuides header hr {
+    margin: 5vh 0 10vh 0;
+    color: #0D1B23;
+}
+
+/* FOOTER */
+
+#gameplayGuidesContacts {
+    color: #efeff0ff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #0D1B23;
+    padding: 5vh 0 5vh 0;
+}
+#gameplayGuidesContacts a {
+    text-decoration: none;
+    color: #efeff0ff;
+    font-weight: bold;
+}
+.footerTitle {
+    text-transform: uppercase;
+}
+#links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#links img {
+    width: 100px;
+    height: 100px;
+}
