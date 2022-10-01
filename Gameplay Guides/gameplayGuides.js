@@ -31,12 +31,27 @@ signupButton.addEventListener("mouseout", () => {
 });
 
 // change the shadow of the search button when hovering on it
+function mouse(ev, targetElement, cl) {
+    switch(ev) {
+        case "mouseover":
+            targetElement.classList.add(cl);
+            break;
+        case "mouseout":
+            targetElement.classList.remove(cl);
+            break;
+        case "click":
+            targetElement.classList.toggle(cl);
+            break;
+    }
+    console.log("Changes to the search button has been applied.");
+}
 let ggSearch = document.querySelector(".gg-search");
 ggSearch.addEventListener("mouseover", () => {
-    ggSearch.classList.add("searchButtonHover");
+    mouse("mouseover", ggSearch, "searchButtonHover");
+    
 });
 ggSearch.addEventListener("mouseout", () => {
-    ggSearch.classList.remove("searchButtonHover");
+    mouse("mouseout", ggSearch, "searchButtonHover");
 });
 // SECTION
 // shadows around an agent's icon when hovering over the agent's name and the agent's icon

@@ -46,74 +46,174 @@
         <section id="agentGuides">
             <header>
                 <h1 class="pageHeader">Guides to every agent</h1>
-                <p>Here you can find lineups, , tricks and guides for every agent. Click on an agent's icon to see guides to this agent.</p>
+                <p>Here you can find lineups, tricks and guides for every agent. Click on an agent's icon to see guides to this agent.</p>
                 <hr>
+                <div id="filters">
+                    <div>
+                        <label for="agentSelect" id="agentSelectLabel">Agent</label>
+                        <select name="agentSelect" id="agentSelect">
+                            <option value="allAgents">All agents</option>
+                            <option value="astra">Astra</option>
+                            <option value="breach">Breach</option>
+                            <option value="brimstone">Brimstone</option>
+                            <option value="chamber">Chamber</option>
+                            <option value="cypher">Cypher</option>
+                            <option value="fade">Fade</option>
+                            <option value="jett">Jett</option>
+                            <option value="keyo">KAY/O</option>
+                            <option value="killjoy">Killjoy</option>
+                            <option value="neon">Neon</option>
+                            <option value="omen">Omen</option>
+                            <option value="phoenix">Phoenix</option>
+                            <option value="raze">Raze</option>
+                            <option value="reyna">Reyna</option>
+                            <option value="sage">Sage</option>
+                            <option value="skye">Skye</option>
+                            <option value="sova">Sova</option>
+                            <option value="viper">Viper</option>
+                            <option value="yoru">Yoru</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="roleSelect" id="roleSelectLabel">Role</label>
+                        <select name="roleSelect" id="roleSelect">
+                            <option value="allRoles">All roles</option>
+                            <option value="duelists">Dueslists</option>
+                            <option value="initiators">Initiators</option>
+                            <option value="controllers">Controllers</option>
+                            <option value="sentinels">Sentinels</option>
+                        </select>
+                    </div>
+                </div>
             </header>
+
+
             <section id="agentList"> <!--сделать функцию для генерации ссылок и имен агентов при загрузке страницы-->
                 <!--добавить неоморфизм на каждый контейнер агента "bookmarks"-->
                 <div class="agentListBlock"> 
                     <div class="agentLi brim">
-                        <a href="">Brimstone</a>
+                        <div class="iconContainer">
+                            <img src="https://static.wikia.nocookie.net/valorant/images/4/4d/Brimstone_icon.png" alt="">
+                        </div>
+                        <div class="agentDesc">
+                            <a href="">Brimstone</a>
+                            <a href="">Controller</a>
+                        </div>
                     </div>
                     <div class="agentLi kayo">
-                        <a href="">KAY/O</a>
+                        <div class="agentDesc">
+                            <a href="">KAY/O</a>
+                            <a href="">Initiator</a>
+                        </div>
                     </div>
                     <div class="agentLi sova">
-                        <a href="">Sova</a>
+                        <div class="agentDesc">
+                            <a href="">Sova</a>
+                            <a href="">Initiator</a>
+                        </div>
                     </div>
                     <div class="agentLi raze">
-                        <a href="">Raze</a>
+                        <div class="agentDesc">
+                            <a href="">Raze</a>
+                            <a href="">Duelist</a>
+                        </div>
                     </div>
                     <div class="agentLi neon">
-                        <a href="">Neon</a>
+                        <div class="agentDesc">
+                            <a href="">Neon</a>
+                            <a href="">Duelist</a>
+                        </div>
                     </div>
                 </div>
                 <div class="agentListBlock">
                     <div class="agentLi cypher">
-                        <a href="">Cypher</a>
+                        <div class="agentDesc">
+                            <a href="">Cypher</a>
+                            <a href="">Sentinel</a>
+                        </div>
                     </div>
                     <div class="agentLi jett">
-                        <a href="">Jett</a>
+                        <div class="agentDesc">
+                            <a href="">Jett</a>
+                            <a href="">Duelist</a>
+                        </div>
                     </div>
                     <div class="agentLi skye">
-                        <a href="">Skye</a>
+                        <div class="agentDesc">
+                            <a href="">Skye</a>
+                            <a href="">Initiator</a>
+                        </div>
                     </div>
                     <div class="agentLi phoenix">
-                        <a href="">Phoenix</a>
+                        <div class="agentDesc">
+                            <a href="">Phoenix</a>
+                            <a href="">Duelist</a>
+                        </div>
                     </div>
                     <div class="agentLi fade">
-                        <a href="">Fade</a>
+                        <div class="agentDesc">
+                            <a href="">Fade</a>
+                            <a href="">Initiator</a>
+                        </div>
                     </div>
                 </div>
                 <div class="agentListBlock">
                     <div class="agentLi breach">
-                        <a href="">Breach</a>
+                        <div class="agentDesc">
+                            <a href="">Breach</a>
+                            <a href="">Initiator</a>
+                        </div>
                     </div>
                     <div class="agentLi yoru">
-                        <a href="">Yoru</a>
+                        <div class="agentDesc">
+                            <a href="">Yoru</a>
+                            <a href="">Duelist</a>
+                        </div>
                     </div>
                     <div class="agentLi reyna">
-                        <a href="">Reyna</a>
+                        <div class="agentDesc">
+                            <a href="">Reyna</a>
+                            <a href="">Dueslist</a>
+                        </div>
                     </div>
                     <div class="agentLi kj">
-                        <a href="">Killjoy</a>
+                        <div class="agentDesc">
+                            <a href="">Killjoy</a>
+                            <a href="">Sentinel</a>
+                        </div>
                     </div>
                     <div class="agentLi chamber">
-                        <a href="">Chamber</a>
+                        <div class="agentDesc">
+                            <a href="">Chamber</a>
+                            <a href="">Sentinel</a>
+                        </div>
                     </div>
                 </div>
                 <div class="agentListBlock">
                     <div class="agentLi astra">
-                        <a href="">Astra</a>
+                        <div class="agentDesc">
+                            <a href="">Astra</a>
+                            <a href="">Controller</a>
+                        </div>
                     </div>
                     <div class="agentLi viper">
-                        <a href="">Viper</a>
+                        <div class="agentDesc">
+                            <a href="">Viper</a>
+                            <a href="">Controller</a>
+                        </div>
                     </div>
                     <div class="agentLi sage">
-                        <a href="">Sage</a>
+                        <div class="agentDesc">
+                            <a href="">Sage</a>
+                            <a href="">Sentinel</a>
+                        </div>
                     </div>
                     <div class="agentLi omen">
-                        <a href="">Omen</a>
+                        <div class="agentDesc">
+                            <a href="">Omen</a>
+                            <a href="">Conroller</a>
+                        </div>
                     </div>
                 </div>
             </section>
