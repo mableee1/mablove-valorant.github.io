@@ -71,13 +71,13 @@
                         <option value="allAgents">All agents</option>
                         <option value="astra">Astra</option>
                         <option value="breach">Breach</option>
-                        <option value="brimstone">Brimstone</option>
+                        <option value="brim">Brimstone</option>
                         <option value="chamber">Chamber</option>
                         <option value="cypher">Cypher</option>
                         <option value="fade">Fade</option>
                         <option value="jett">Jett</option>
-                        <option value="keyo">KAY/O</option>
-                        <option value="killjoy">Killjoy</option>
+                        <option value="kayo">KAY/O</option>
+                        <option value="kj">Killjoy</option>
                         <option value="neon">Neon</option>
                         <option value="omen">Omen</option>
                         <option value="phoenix">Phoenix</option>
@@ -95,26 +95,34 @@
                     <label for="roleSelect" id="roleSelectLabel">Role</label>
                     <select name="roleSelect" id="roleSelect">
                         <option value="allRoles">All roles</option>
-                        <option value="duelists">Dueslists</option>
-                        <option value="initiators">Initiators</option>
-                        <option value="controllers">Controllers</option>
-                        <option value="sentinels">Sentinels</option>
+                        <option value="duelist">Duelists</option>
+                        <option value="initiator">Initiators</option>
+                        <option value="controller">Controllers</option>
+                        <option value="sentinel">Sentinels</option>
                     </select>
                 </div>
             </div>
+            <div class="addGuideButtonContainer">
+                <button onclick="window.location.href=''" class="addGuideButton">
+                    Add guide
+                </button>
+            </div>
             <div id="agentList">
                 <!--добавить неоморфизм на каждый контейнер агента "bookmarks"-->
-                <div class="agentListBlock">
-                    <div class="agentLi brim">
+                    <div class="agentLi brim controller">
                         <div class="iconContainer">
                             <img src="https://static.wikia.nocookie.net/valorant/images/4/4d/Brimstone_icon.png" alt="">
                         </div>
                         <div class="agentDesc">
                             <a href="">Brimstone</a>
                             <a href="">Controller</a>
+                            <img src="" alt="">
                         </div>
+                        <button onclick="window.location.href=''" class="guideButton">
+                            See guides
+                        </button>
                     </div>
-                    <div class="agentLi kayo">
+                    <div class="agentLi kayo initiator">
                         <div class="iconContainer">
                             <img src="https://static.wikia.nocookie.net/valorant/images/f/f0/KAYO_icon.png" alt="">
                         </div>
@@ -122,8 +130,11 @@
                             <a href="">KAY/O</a>
                             <a href="">Initiator</a>
                         </div>
+                        <button onclick="window.location.href=''" class="guideButton">
+                            See guides
+                        </button>
                     </div>
-                    <div class="agentLi sova">
+                    <div class="agentLi sova initiator">
                         <div class="iconContainer">
                             <img src="https://static.wikia.nocookie.net/valorant/images/4/49/Sova_icon.png" alt="">
                         </div>
@@ -131,8 +142,11 @@
                             <a href="">Sova</a>
                             <a href="">Initiator</a>
                         </div>
+                        <button onclick="window.location.href=''" class="guideButton">
+                            See guides
+                        </button>
                     </div>
-                    <div class="agentLi raze">
+                    <div class="agentLi raze duelist">
                         <div class="iconContainer">
                             <img src="https://static.wikia.nocookie.net/valorant/images/9/9c/Raze_icon.png" alt="">
                         </div>
@@ -140,8 +154,11 @@
                             <a href="">Raze</a>
                             <a href="">Duelist</a>
                         </div>
+                        <button onclick="window.location.href=''" class="guideButton">
+                            See guides
+                        </button>
                     </div>
-                    <div class="agentLi neon">
+                    <div class="agentLi neon duelist">
                         <div class="iconContainer">
                             <img src="https://static.wikia.nocookie.net/valorant/images/d/d0/Neon_icon.png" alt="">
                         </div>
@@ -149,10 +166,12 @@
                             <a href="">Neon</a>
                             <a href="">Duelist</a>
                         </div>
+                        <button onclick="window.location.href=''" class="guideButton">
+                            See guides
+                        </button>
                     </div>
-                </div>
-                <div class="agentListBlock">
-                    <div class="agentLi cypher">
+            
+                    <div class="agentLi cypher sentinel">
                         <div class="iconContainer">
                             <img src="https://static.wikia.nocookie.net/valorant/images/8/88/Cypher_icon.png" alt="">
                         </div>
@@ -160,8 +179,11 @@
                             <a href="">Cypher</a>
                             <a href="">Sentinel</a>
                         </div>
+                        <button onclick="window.location.href=''" class="guideButton">
+                            See guides
+                        </button>
                     </div>
-                    <div class="agentLi jett">
+                    <div class="agentLi jett duelist">
                         <div class="iconContainer">
                             <img src="https://static.wikia.nocookie.net/valorant/images/3/35/Jett_icon.png" alt="">
                         </div>
@@ -169,8 +191,11 @@
                             <a href="">Jett</a>
                             <a href="">Duelist</a>
                         </div>
+                        <button onclick="window.location.href=''" class="guideButton">
+                            See guides
+                        </button>
                     </div>
-                    <div class="agentLi skye">
+                    <div class="agentLi skye initiator">
                         <div class="iconContainer">
                             <img src="https://static.wikia.nocookie.net/valorant/images/3/33/Skye_icon.png" alt="">
                         </div>
@@ -178,8 +203,11 @@
                             <a href="">Skye</a>
                             <a href="">Initiator</a>
                         </div>
+                        <button onclick="window.location.href=''" class="guideButton">
+                            See guides
+                        </button>
                     </div>
-                    <div class="agentLi phoenix">
+                    <div class="agentLi phoenix duelist">
                         <div class="iconContainer">
                             <img src="https://static.wikia.nocookie.net/valorant/images/1/14/Phoenix_icon.png" alt="">
                         </div>
@@ -187,8 +215,11 @@
                             <a href="">Phoenix</a>
                             <a href="">Duelist</a>
                         </div>
+                        <button onclick="window.location.href=''" class="guideButton">
+                            See guides
+                        </button>
                     </div>
-                    <div class="agentLi fade">
+                    <div class="agentLi fade initiator">
                         <div class="iconContainer">
                             <img src="https://static.wikia.nocookie.net/valorant/images/a/a6/Fade_icon.png" alt="">
                         </div>
@@ -196,10 +227,12 @@
                             <a href="">Fade</a>
                             <a href="">Initiator</a>
                         </div>
+                        <button onclick="window.location.href=''" class="guideButton">
+                            See guides
+                        </button>
                     </div>
-                </div>
-                <div class="agentListBlock">
-                    <div class="agentLi breach">
+                
+                    <div class="agentLi breach initiator">
                         <div class="iconContainer">
                             <img src="https://static.wikia.nocookie.net/valorant/images/5/53/Breach_icon.png" alt="">
                         </div>
@@ -207,8 +240,11 @@
                             <a href="">Breach</a>
                             <a href="">Initiator</a>
                         </div>
+                        <button onclick="window.location.href=''" class="guideButton">
+                            See guides
+                        </button>
                     </div>
-                    <div class="agentLi yoru">
+                    <div class="agentLi yoru duelist">
                         <div class="iconContainer">
                             <img src="https://static.wikia.nocookie.net/valorant/images/d/d4/Yoru_icon.png" alt="">
                         </div>
@@ -216,8 +252,11 @@
                             <a href="">Yoru</a>
                             <a href="">Duelist</a>
                         </div>
+                        <button onclick="window.location.href=''" class="guideButton">
+                            See guides
+                        </button>
                     </div>
-                    <div class="agentLi reyna">
+                    <div class="agentLi reyna duelist">
                         <div class="iconContainer">
                             <img src="https://static.wikia.nocookie.net/valorant/images/b/b0/Reyna_icon.png" alt="">
                         </div>
@@ -225,8 +264,11 @@
                             <a href="">Reyna</a>
                             <a href="">Dueslist</a>
                         </div>
+                        <button onclick="window.location.href=''" class="guideButton">
+                            See guides
+                        </button>
                     </div>
-                    <div class="agentLi kj">
+                    <div class="agentLi kj sentinel">
                         <div class="iconContainer">
                             <img src="https://static.wikia.nocookie.net/valorant/images/1/15/Killjoy_icon.png" alt="">
                         </div>
@@ -234,8 +276,11 @@
                             <a href="">Killjoy</a>
                             <a href="">Sentinel</a>
                         </div>
+                        <button onclick="window.location.href=''" class="guideButton">
+                            See guides
+                        </button>
                     </div>
-                    <div class="agentLi chamber">
+                    <div class="agentLi chamber sentinel">
                         <div class="iconContainer">
                             <img src="https://static.wikia.nocookie.net/valorant/images/0/09/Chamber_icon.png" alt="">
                         </div>
@@ -243,10 +288,11 @@
                             <a href="">Chamber</a>
                             <a href="">Sentinel</a>
                         </div>
+                        <button onclick="window.location.href=''" class="guideButton">
+                            See guides
+                        </button>
                     </div>
-                </div>
-                <div class="agentListBlock">
-                    <div class="agentLi astra">
+                    <div class="agentLi astra controller">
                         <div class="iconContainer">
                             <img src="https://static.wikia.nocookie.net/valorant/images/0/08/Astra_icon.png" alt="">
                         </div>
@@ -254,8 +300,11 @@
                             <a href="">Astra</a>
                             <a href="">Controller</a>
                         </div>
+                        <button onclick="window.location.href=''" class="guideButton">
+                            See guides
+                        </button>
                     </div>
-                    <div class="agentLi viper">
+                    <div class="agentLi viper controller">
                         <div class="iconContainer">
                             <img src="https://static.wikia.nocookie.net/valorant/images/5/5f/Viper_icon.png" alt="">
                         </div>
@@ -263,8 +312,11 @@
                             <a href="">Viper</a>
                             <a href="">Controller</a>
                         </div>
+                        <button onclick="window.location.href=''" class="guideButton">
+                            See guides
+                        </button>
                     </div>
-                    <div class="agentLi sage">
+                    <div class="agentLi sage sentinel">
                         <div class="iconContainer">
                             <img src="https://static.wikia.nocookie.net/valorant/images/7/74/Sage_icon.png" alt="">
                         </div>
@@ -272,8 +324,11 @@
                             <a href="">Sage</a>
                             <a href="">Sentinel</a>
                         </div>
+                        <button onclick="window.location.href=''" class="guideButton">
+                            See guides
+                        </button>
                     </div>
-                    <div class="agentLi omen">
+                    <div class="agentLi omen controller">
                         <div class="iconContainer">
                             <img src="https://static.wikia.nocookie.net/valorant/images/b/b0/Omen_icon.png" alt="">
                         </div>
@@ -281,8 +336,10 @@
                             <a href="">Omen</a>
                             <a href="">Conroller</a>
                         </div>
+                        <button onclick="window.location.href=''" class="guideButton">
+                            See guides
+                        </button>
                     </div>
-                </div>
             </div>
         </section>
     </section>

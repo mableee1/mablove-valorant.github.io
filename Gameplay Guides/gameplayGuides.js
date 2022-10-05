@@ -54,12 +54,60 @@ ggSearch.addEventListener("mouseout", () => {
     mouse("mouseout", ggSearch, "searchButtonHover");
 });
 // SECTION
-// shadows around an agent's icon when hovering over the agent's name and the agent's icon
-
 // new guides subscription form (e-mail)
 
 // add new guide (only for signed up users)
 
-
+// filters
+// filter by agent
+// .elementVisibility
+// при выборе агента, убрать остальные .agentListBlock
+// переделать в grid, так как grid является многомерным, а flexbox - двумерный
+let agentFilter = document.querySelector("#agentSelect");
+let agentCards = document.querySelectorAll(".agentLi");
+agentFilter.addEventListener("change", () => {
+    if (agentFilter.value !== "allAgents") {
+        let chosenAgent = agentFilter.value;
+        agentCards.forEach((item) => {
+            if (!item.classList.contains(chosenAgent) && item.classList.contains("agentLi")) {
+                item.classList.remove("agentLi");
+                item.classList.add("elementInvisibility");
+            } else if (item.classList.contains(chosenAgent) && !item.classList.contains("agentLi") && item.classList.contains("elementInvisibility")) {
+                item.classList.remove("elementInvisibility");
+                item.classList.add("agentLi");
+            }
+        });
+    } else if (agentFilter.value === "allAgents") {
+        agentCards.forEach((item) => {
+            if (!item.classList.contains("agentLi") && item.classList.contains("elementInvisibility")) {
+                item.classList.remove("elementInvisibility");
+                item.classList.add("agentLi");
+            }
+        });
+    }
+});
+// filter by role
+let roleFilter = document.querySelector("#roleSelect");
+roleFilter.addEventListener("change", () => {
+    let chosenRole = roleFilter.value;
+    if (chosenRole !== "allRoles") {
+        agentCards.forEach((item) => {
+            if (!item.classList.contains(chosenRole)) {
+                item.classList.remove("agentLi");
+                item.classList.add("elementInvisibility");
+            } else if (item.classList.contains(chosenRole) && item.classList.contains("elementInvisibility")) {
+                item.classList.remove("elementInvisibility");
+                item.classList.add("agentLi");
+            }
+        });
+    } else {
+        agentCards.forEach((item) => {
+            if (item.classList.contains("elementInvisibility")) {
+                item.classList.remove("elementInvisibility");
+                item.classList.add("agentLi");
+            }
+        });
+    }
+});
 // FOOTER
 // change an option's color when hovering over it
