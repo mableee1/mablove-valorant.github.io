@@ -6,8 +6,6 @@
 #1D2F6F
 #8390FA
  */
-/*ТЭГИ*/
-
 body {
     margin: 0;
     background-color: #efeff0ff;
@@ -15,7 +13,13 @@ body {
     font-family: 'Open Sans', sans-serif;
     scroll-behavior: smooth;
 }
-
+#navContainer {
+    width: 100vw;
+    top: 0;
+    position: fixed;
+    background-color: #1D2F6F;
+    z-index: 1;
+}
 nav {
     display: flex;
     justify-content: flex-start;
@@ -30,19 +34,7 @@ nav li a {
     text-transform: uppercase;
     color: #efeff0ff;
 }
-.menuOptionHover {
-    color: #f94353 !important;
-    transition: all .5s ease-out;
-}
-/* КЛАССЫ */
-.navContainer {
-    width: 100vw;
-    top: 0;
-    position: fixed;
-    background-color: #1D2F6F;
-    z-index: 1;
-}
-.menuContainer { /*float*/
+.menuContainer {
     display: flex;
     width: 50vw;
     padding: 2vh 0 2vh 0;
@@ -54,7 +46,10 @@ nav li a {
     width: inherit;
     font-weight: bold;
 }
-
+.optionContainer a:hover {
+    color: #f94353;
+    transition: all .5s ease-out;
+}
 .valorantLogo {
     width: 75px;
     height: 50px;
@@ -105,8 +100,8 @@ nav li a {
     background-color: transparent;
     border: none;
 }
-.searchButtonHover {
-    color: #f94353 !important;
+#navContainer .searchButtonHover {
+    color: #f94353;
     transition: all .5s;
 }
 /*icon*/
@@ -114,14 +109,14 @@ nav li a {
     color: #efeff0ff;
 }
 .signupButton {
-    border-radius: 25px;
+    border-radius: 30px;
     width: 12vw;
     height: 6vh;
     background-color: transparent;
     border-color: #efeff0ff;
     border-style: solid;
-    border-width: 1px;
-    margin-top: 1.4%;
+    border-width: 2px;
+    margin-top: 0.8%;
     margin-right: 5vw;
     font-size: 1em;
 }
@@ -141,7 +136,6 @@ nav li a {
 #agentGuides header {
     height: 70vh;
     background-color: #1D2F6F;
-    background-image: url();
     background-size: 50%;
     background-position: center;
     background-repeat: no-repeat;
@@ -205,7 +199,7 @@ nav li a {
     display: grid;
     grid-template-columns: repeat(4, 250px);
     grid-template-rows: repeat(4, 200px);
-    column-gap: 7vw;
+    column-gap: 14vw;
     row-gap: 20vh;
     padding: 0 5vw 0 5vw;
     /*box-shadow: 10px 10px 21px #d3d3d6,
@@ -280,9 +274,10 @@ nav li a {
     text-transform: lowercase;
 }
 .guideButton {
+    font-size: 0.5em;
     margin-top: 15%;
-    width: 45%;
-    height: 15%;
+    width: 50%;
+    height: 20%;
     border-radius: 30px;
     border: 1px solid #1D2F6F;
     background-color: transparent;
