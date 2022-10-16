@@ -5,19 +5,28 @@
 --old-lavender: #6b5e62ff;
 #1D2F6F
 #8390FA
+
+#0e1721
+#6fb7c4
+#fa4856
+#ebe6df
  */
 /* HEADER */
 body {
     margin: 0;
-    background-color: #1D2F6F;
+    background-color: #0e1721;
     font-family: 'Open Sans', sans-serif;
     scroll-behavior: smooth;
+    background-image: url("img/jett.png");
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position-x: -100%;
 }
 #navContainer {
     width: 100vw;
     top: 0;
     position: fixed;
-    background-color: #8390FA;
+    background-color: #0e1721;
     z-index: 1;
 }
 nav {
@@ -32,7 +41,7 @@ nav li {
 }
 nav li a {
     text-transform: uppercase;
-    color: #efeff0ff;
+    color: #ebe6df;
 }
 .menuContainer { /*float*/
     display: flex;
@@ -47,7 +56,7 @@ nav li a {
     font-weight: bold;
 }
 .optionContainer a:hover {
-    color: #f94353;
+    color: #6fb7c4;
     transition: all .5s ease-out;
 }
 
@@ -67,8 +76,8 @@ nav li a {
     visibility: hidden;
     background-color: transparent;
     border: none;
-    border-bottom: .5px solid #efeff0ff;
-    color: #efeff0ff;
+    border-bottom: .5px solid #ebe6df;
+    color: #ebe6df;
     height: 5vh;
     width: 15vw;
     margin: 0;
@@ -76,11 +85,11 @@ nav li a {
     font-size: 0.7em;
 }
 .searchBar::placeholder {
-    color: #efeff0ff;
+    color: #ebe6df;
 }
 .searchBar:focus {
-    background-color: #efeff0ff;
-    color: black;
+    background-color: #ebe6df;
+    color: #0e1721;
     transition: all .5s ease-out;
 }
 .elementVisibility { /* JS: hide searchBar*/
@@ -100,32 +109,37 @@ nav li a {
     border: none;
 }
 #navContainer .searchButtonHover {
-    color: #f94353;
+    color: #6fb7c4;
     transition: all .5s;
 }
 /*icon*/
 .gg-search {
-    color: #efeff0ff;
+    color: #ebe6df;
 }
-.signupButton {
+.signinButton {
     border-radius: 30px;
-    width: 12vw;
-    height: 6vh;
+    width: 8vw;
+    height: 5vh;
     background-color: transparent;
-    border-color: #efeff0ff;
+    border-color: #6fb7c4;
     border-style: solid;
     border-width: 2px;
     margin-top: 0.8%;
     margin-right: 5vw;
     font-size: 1em;
-}
-.signupButtonHover {
-    border-color: #f94353;
     transition: all .5s ease-out;
 }
-.signupLink {
-    color: #efeff0ff;
-    text-transform: uppercase;
+#navContainer .signinButton:hover {
+    background-color: #6fb7c4;
+}
+
+.signinLink {
+    color: #6fb7c4;
+    transition: all .5s ease-out;
+}
+
+#navContainer .signinButton:hover .signinLink {
+    color: #0e1721;
 }
 /*
 #agentList {
@@ -141,19 +155,95 @@ nav li a {
 
 
 
+/*  SECTION */
+#content {
+    margin: 30vh 0 30vh 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* form container */
+.signInForm {
+    width: 30vw;
+    background-color: #0e1721;
+    padding: 0px 70px 0px 70px;
+    background: linear-gradient(145deg, #0d151e, #0f1923);
+    box-shadow:  20px 20px 60px #0c141c,
+             -20px -20px 60px #101a26;
+    color: #ebe6df;
+    border-radius: 50px;
+}
+.signInForm h1 {
+    margin-top: 0px;
+    padding-top: 70px;
+    font-weight: bold;
+    font-size: 2em;
+}
+/* form */
+.form {
+    height: 30vh;
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+/* e-mail and password inputs */
+.input {
+    width: 100%;
+    height: 7vh;
+    border-radius: 7px;
+    border: none;
+    color: #0e1721;
+    font-size: 1.3em;
+    padding-left: 1vw;
+}
+.submitButton {
+    height: 7vh;
+    width: 50%;
+    background-color: #6fb7c4;
+    border: none;
+    border-radius: 15px;
+    color: #0e1721;
+    font-size: 1.3em;
+    transition: all .5s ease;
+}
+.submitButton:hover {
+    border: 1px solid #6fb7c4;
+    background-color: #0e1721;
+    color: #6fb7c4;
+}
+/* forgot my password, create a new account links */
+.userOptions {
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 70px;
+}
+.userOptions a {
+    text-decoration: none;
+    color: #ebe6df;
+    width: fit-content;
+    transition: all 1s ease;
+}
+.userOptions a:hover {
+    color: #6fb7c4;
+}
+
+
 /* FOOTER */
 #contacts {
-    color: #efeff0ff;
+    color: #0e1721;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    background-color: #8390FA;
+    background-color: #6fb7c4;
     padding: 5vh 0 5vh 0;
 }
 #contacts a {
     text-decoration: none;
-    color: #efeff0ff;
+    color: #0e1721;
     font-weight: bold;
 }
 /* footer links */

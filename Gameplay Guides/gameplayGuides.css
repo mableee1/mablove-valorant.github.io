@@ -110,8 +110,8 @@ nav li a {
 }
 .signupButton {
     border-radius: 30px;
-    width: 12vw;
-    height: 6vh;
+    width: 8vw;
+    height: 5vh;
     background-color: transparent;
     border-color: #efeff0ff;
     border-style: solid;
@@ -126,7 +126,6 @@ nav li a {
 }
 .signupLink {
     color: #efeff0ff;
-    text-transform: uppercase;
 }
 
                                         /*agent guides*/

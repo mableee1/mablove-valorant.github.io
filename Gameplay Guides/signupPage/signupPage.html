@@ -43,8 +43,8 @@
                     <i class="gg-search"></i>
                 </button>
             </div>
-            <button class="signupButton">
-                <a href="" class="signupLink">Sign up</a>
+            <button class="signinButton">
+                <a href="" class="signinLink">Sign in</a>
             </button>
         </nav>
     </header>
@@ -52,15 +52,18 @@
 
 
     <section id="content">
-
-        <form name="signinForm" action="">
-            <label for="">E-mail</label>
-            <input type="text">
-
-            <label for="">Password</label>
-            <input type="text">
-        </form>
-
+        <div class="signInForm">
+            <h1>Sign in</h1>
+            <form name="signin" action="" class="form">
+                <input type="email" class="input" placeholder="E-mail">
+                <input type="password" class="input" placeholder="Password">
+                <input type="submit" value="Log in" class="submitButton">
+            </form>
+            <div class="userOptions">
+                <a href="">Forgot my password</a>
+                <a href="">Create a new account</a>
+            </div>
+        </div>
     </section>
 
 

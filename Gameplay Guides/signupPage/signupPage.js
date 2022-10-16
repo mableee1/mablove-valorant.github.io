@@ -6,18 +6,6 @@ searchButton.addEventListener("click", () => {
     searchBar.classList.toggle("elementVisibility");
 });
 
-// change the color of the SIGN UP button when hovering on it
-let signupButton = document.querySelector(".signupButton");
-let signupLink = document.querySelector(".signupLink");
-signupButton.addEventListener("mouseover", () => {
-    signupButton.classList.add("signupButtonHover");
-    signupLink.classList.add("menuOptionHover");
-});
-signupButton.addEventListener("mouseout", () => {
-    signupButton.classList.remove("signupButtonHover");
-    signupLink.classList.remove("menuOptionHover");
-});
-
 // change the shadow of the search button when hovering on it
 function mouse(ev, targetElement, cl) {
     switch(ev) {
