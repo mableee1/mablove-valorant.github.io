@@ -29,3 +29,34 @@ ggSearch.addEventListener("mouseover", () => {
 ggSearch.addEventListener("mouseout", () => {
     mouse("mouseout", ggSearch, "searchButtonHover");
 });
+
+
+
+// SECTION
+// e.preventDefault() - it disables default behaviour of such elements as <a>, submit buttons
+// - without it, these tags will automatically direct to href (for <a>) or attempt to submit data (submit button)
+// show signup form when clicking on .switchToCreate
+let createAcc = document.querySelector(".switchToCreate");
+let signupForm = document.querySelector(".signupForm");
+let signupOptions = document.querySelector(".signupOptions");
+let signupTitle = document.querySelector("#signupTitle");
+// show signin form when clicking on .switchTo Login
+let loginAcc = document.querySelector(".switchToLogin");
+let signinForm = document.querySelector(".signinForm");
+let signinOptions = document.querySelector(".signinOptions");
+let signinTitle = document.querySelector("#signinTitle");
+// Arrays
+// array of user options
+let accActions = [createAcc, loginAcc];
+// array of form elements
+let formElements = [signupForm, signupOptions, signupTitle,
+signinForm, signinOptions, signinTitle];
+// event listeners for signup, signin
+accActions.forEach((item) => {
+    item.addEventListener("click", (e) => {
+        e.preventDefault();
+        formElements.forEach((item) => {
+            item.classList.toggle("hide");
+        });
+    });
+});
