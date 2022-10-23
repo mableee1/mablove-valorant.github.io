@@ -26,7 +26,7 @@
                         src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Valorant_logo_-_pink_color_version.svg/512px-Valorant_logo_-_pink_color_version.svg.png"></a>
                 <div class="optionContainer">
                     <li>
-                        <a href="">home</a>
+                        <a href="#content">home</a>
                     </li>
                     <li>
                         <a href="">agent guides</a>
@@ -55,29 +55,46 @@
         <div class="formContainer">
             <h1 id="signinTitle">Sign in</h1>
             <h1 id="signupTitle" class="hide">Sign up</h1>
+            <h1 id="forgotPasswordTitle" class="hide">Get access to your account</h1>
             <!-- SIGN IN FORM -->
             <form name="signin" action="" class="form signinForm">
-                <input type="email" placeholder="E-mail" class="input">
-                <input type="password" placeholder="Password" class="input">
+                <input type="email" required placeholder="E-mail" class="input">
+                <input type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{9,}" required placeholder="Password" class="input">
                 <input type="submit" value="Log in" class="submitButton">
+                <!-- SIGN IN OPTIONS -->
+                <div class="userOptions signinOptions">
+                    <a href="" class="forgotMyPassword">Forgot my password</a>
+                    <a href="" class="switchToCreate">Create a new account</a>
+                </div>
             </form>
             <!-- SIGN UP FORM-->
             <form name="signup" action="" class="form signupForm hide">
-                <input type="text" placeholder="Username" class="input">
-                <input type="email" placeholder="E-mail" class="input">
-                <input type="password" placeholder="New password" class="input">
-                <input type="password" placeholder="Confirm password" class="input">
+                <input type="text" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,9}" required placeholder="Username" class="input">
+                <input type="email" required placeholder="E-mail" class="input">
+                <input type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{9,}" required placeholder="New password" class="input" id="newPass">
+                <input type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{9,}" required placeholder="Confirm password" class="input" id="confirmPass">
                 <input type="submit" value="Sign up" class="submitButton">
+                <!-- SIGN UP USER OPTIONS -->
+                <div class="userOptions signupOptions hide">
+                    <a href="" class="switchToLogin">Already have an account?</a>
+                </div>
             </form>
-            <!-- SIGN IN OPTIONS -->
-            <div class="userOptions signinOptions">
-                <a href="">Forgot my password</a>
-                <a href="" class="switchToCreate">Create a new account</a>
-            </div>
-            <!-- SIGN UP USER OPTIONS -->
-            <div class="userOptions signupOptions hide">
-                <a href="" class="switchToLogin">Already have an account?</a>
-            </div>
+            <!-- FORGOT MY PASSWORD FORM - a user can enter a code form his e-mail and then reset his password in his account settings -->
+            <form name="forgotpassword" action="" class="form forgotPassForm hide">
+                <label for="email" id="emailCodeLabel">Enter your e-mail to receive a code for account access</label>
+                <input name="email" type="email" required placeholder="Your e-mail" id="emailCode" class="input">
+                <input type="submit" value="Enter" id="receiveCode" class="submitButton">
+                
+                <label for="code" id="codeLabel" class="hide">Enter your code your received via your e-mail</label>
+                <input name="code" type="text" required placeholder="Your code" id="code" class="input hide">
+                <input type="submit" value="Enter" id="confirmCode" class="submitButton hide">
+                <!-- FORGOT PASSWORD USER OPTIONS -->
+                <div class="userOptions">
+                    <a href="" class="switchToLogin">Already have an account?</a>
+                    <a href="" class="switchToCreate">Create a new account</a>
+                </div>
+            </form>
+            
         </div>
     </section>
 

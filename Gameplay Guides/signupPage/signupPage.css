@@ -16,6 +16,10 @@
 #content .formContainer .hide {
     display: none;
 }
+/* when Confirm password input !== New password input */
+#content .incorrectInput {
+    box-shadow:  0 0 7px 1px red;
+}
 /* HEADER */
 body {
     margin: 0;
@@ -203,6 +207,12 @@ nav li a {
     font-size: 1.3em;
     padding-left: 1vw;
 }
+.input:valid {
+    box-shadow:  0 0 7px 1px greenyellow;
+}
+.input:invalid {
+    box-shadow:  0 0 7px 1px red;
+}
 .submitButton {
     height: 7vh;
     width: 50%;
@@ -218,7 +228,7 @@ nav li a {
     background-color: #0e1721;
     color: #6fb7c4;
 }
-/* forgot my password, create a new account links */
+/* all .userOptions instances*/
 .userOptions {
     margin-top: 5vh;
     display: flex;
@@ -234,7 +244,13 @@ nav li a {
 .userOptions a:hover {
     color: #6fb7c4;
 }
-
+/* forgot my password user links */
+.forgotPassForm .userOptions {
+    display: flex;
+    
+    flex-direction: column;
+    align-items: flex-start;
+}
 
 /* FOOTER */
 #contacts {
