@@ -52,7 +52,7 @@ nav li a {
     text-transform: uppercase;
     color: #ebe6df;
 }
-.menuContainer { /*float*/
+.menuContainer {
     display: flex;
     width: 50vw;
     padding: 2vh 0 2vh 0;
@@ -190,8 +190,14 @@ nav li a {
 }
 /* form */
 .form {
-    height: 45vh;
+    height: 70vh;
     margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+}
+/* inputs only container */
+.inputsContainer {
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
