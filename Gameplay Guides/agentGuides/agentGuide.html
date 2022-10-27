@@ -19,7 +19,7 @@
 </head>
 <body>
     <!--Navbar-->
-    <header id="navContainer">
+    <header class="navContainer">
         <nav>
             <div class="menuContainer">
                 <a title="Riot Games, Public domain, via Wikimedia Commons"
@@ -50,12 +50,34 @@
             </button>
         </nav>
     </header>
+    <section class="pageBackground">
 
+    </section>
     <!--Content-->
     <section id="content">
         <!--Filter container-->
         <div id="filters">
-
+            <div class="filterContainer">
+                <label for="map">map</label>
+                <select name="map" id="mapFilter">
+                    <option value="pearl">Pearl</option>
+                    <option value="fracture">Fracture</option>
+                    <option value="breeze">Breeze</option>
+                    <option value="icebox">Icebox</option>
+                    <option value="bind">Bind</option>
+                    <option value="haven">Haven</option>
+                    <option value="split">Split</option>
+                    <option value="ascent">Ascent</option>
+                </select>
+            </div>
+            <div class="filterContainer">
+                <label for="side">side</label>
+                <select name="side" id="sideFilter">
+                    <option value="attack">Attack</option>
+                    <option value="defense">Defense</option>
+                </select>
+            </div>
+            
         </div>
         <!--Add guide button container-->
         <div id="addGuideButtonContainer">
@@ -66,6 +88,10 @@
         <!--Guides container: every guide is generated through js-->
         <div id="guides">
             <div class="guideContainer">
+                <!--Agent image-->
+                <div class="iconContainer">
+                    <img src="https://static.wikia.nocookie.net/valorant/images/3/35/Jett_icon.png" alt="" class="agentIcon">
+                </div>
                 <!--Guide image-->
                 <img src="https://twinfinite.net/wp-content/uploads/2022/07/game-overview-poster-launch.jpg" alt="" class="guideImg">
                 <!--Guide tags (related to the filters)-->
@@ -104,7 +130,11 @@
                 </div>
             </div>
             <div class="guideContainer">
-<!--Guide image-->
+                <!--Agent image-->
+                <div class="iconContainer">
+                    <img src="https://static.wikia.nocookie.net/valorant/images/3/35/Jett_icon.png" alt="" class="agentIcon">
+                </div>
+                <!--Guide image-->
                 <img src="https://twinfinite.net/wp-content/uploads/2022/07/game-overview-poster-launch.jpg" alt="" class="guideImg">
                 <!--Guide tags (related to the filters)-->
                 <div class="guideTags">
@@ -142,7 +172,54 @@
                 </div>
             </div>
             <div class="guideContainer">
-<!--Guide image-->
+                <!--Agent image-->
+                <div class="iconContainer">
+                    <img src="https://static.wikia.nocookie.net/valorant/images/3/35/Jett_icon.png" alt="" class="agentIcon">
+                </div>
+                <!--Guide image-->
+                <img src="https://twinfinite.net/wp-content/uploads/2022/07/game-overview-poster-launch.jpg" alt="" class="guideImg">
+                <!--Guide tags (related to the filters)-->
+                <div class="guideTags">
+                    <ul class="tagsList">
+                        <li>
+                            <!--Map title*-->
+                            Breeze
+                        </li>
+                        <li>
+                            <!--Side (attack or defense)-->
+                            Defense
+                        </li>
+                    </ul>
+                </div>
+                <!--Guide Description (title, author, date, favorite count)-->
+                <div class="guideDesc">
+                    <!--Guide title-->
+                    <h1 class="guideTitle">
+                        Breeze wall B
+                    </h1>
+                    <!--By {author} container-->
+                    <div class="authorContainer">
+                        By <a href="" class="guideAuthor">User</a>
+                    </div>
+                    <!--Date-->
+                    <p class="dateCreated">
+                        <!--DATE FORMAT: day Month year-->
+                        9 hours ago
+                    </p>
+                    <!--Favorite count-->
+                    <div class="favoriteContainer">
+                        <i class="gg-heart"></i>
+                        <p class="favCount">0</p> <!--add number of times favorited-->
+                    </div>
+                </div>
+            </div>
+
+            <div class="guideContainer">
+<!--Agent image-->
+                <div class="iconContainer">
+                    <img src="https://static.wikia.nocookie.net/valorant/images/3/35/Jett_icon.png" alt="" class="agentIcon">
+                </div>
+                <!--Guide image-->
                 <img src="https://twinfinite.net/wp-content/uploads/2022/07/game-overview-poster-launch.jpg" alt="" class="guideImg">
                 <!--Guide tags (related to the filters)-->
                 <div class="guideTags">
@@ -180,13 +257,88 @@
                 </div>
             </div>
             <div class="guideContainer">
-
+<!--Agent image-->
+                <div class="iconContainer">
+                    <img src="https://static.wikia.nocookie.net/valorant/images/3/35/Jett_icon.png" alt="" class="agentIcon">
+                </div>
+                <!--Guide image-->
+                <img src="https://twinfinite.net/wp-content/uploads/2022/07/game-overview-poster-launch.jpg" alt="" class="guideImg">
+                <!--Guide tags (related to the filters)-->
+                <div class="guideTags">
+                    <ul class="tagsList">
+                        <li>
+                            <!--Map title*-->
+                            Breeze
+                        </li>
+                        <li>
+                            <!--Side (attack or defense)-->
+                            Defense
+                        </li>
+                    </ul>
+                </div>
+                <!--Guide Description (title, author, date, favorite count)-->
+                <div class="guideDesc">
+                    <!--Guide title-->
+                    <h1 class="guideTitle">
+                        Breeze wall B
+                    </h1>
+                    <!--By {author} container-->
+                    <div class="authorContainer">
+                        By <a href="" class="guideAuthor">User</a>
+                    </div>
+                    <!--Date-->
+                    <p class="dateCreated">
+                        <!--DATE FORMAT: day Month year-->
+                        9 hours ago
+                    </p>
+                    <!--Favorite count-->
+                    <div class="favoriteContainer">
+                        <i class="gg-heart"></i>
+                        <p class="favCount">0</p> <!--add number of times favorited-->
+                    </div>
+                </div>
             </div>
             <div class="guideContainer">
-
-            </div>
-            <div class="guideContainer">
-
+<!--Agent image-->
+                <div class="iconContainer">
+                    <img src="https://static.wikia.nocookie.net/valorant/images/3/35/Jett_icon.png" alt="" class="agentIcon">
+                </div>
+                <!--Guide image-->
+                <img src="https://twinfinite.net/wp-content/uploads/2022/07/game-overview-poster-launch.jpg" alt="" class="guideImg">
+                <!--Guide tags (related to the filters)-->
+                <div class="guideTags">
+                    <ul class="tagsList">
+                        <li>
+                            <!--Map title*-->
+                            Breeze
+                        </li>
+                        <li>
+                            <!--Side (attack or defense)-->
+                            Defense
+                        </li>
+                    </ul>
+                </div>
+                <!--Guide Description (title, author, date, favorite count)-->
+                <div class="guideDesc">
+                    <!--Guide title-->
+                    <h1 class="guideTitle">
+                        Breeze wall B
+                    </h1>
+                    <!--By {author} container-->
+                    <div class="authorContainer">
+                        By <a href="" class="guideAuthor">User</a>
+                    </div>
+                    <!--Date-->
+                    <p class="dateCreated">
+                        <!--DATE FORMAT: day Month year-->
+                        9 hours ago
+                    </p>
+                    <!--Favorite count-->
+                    <div class="favoriteContainer">
+                        <i class="gg-heart"></i>
+                        <p class="favCount">0</p> <!--add number of times favorited-->
+                    </div>
+                </div>
             </div>
         </div>
     </section>
