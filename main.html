@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Pragati+Narrow&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <link type="image/png" sizes="16x16" rel="icon" href="https://img.icons8.com/plasticine/100/000000/valorant.png">
+    <title>Valorant agents</title>
+</head>
+<body>
+    <!--   Semantic Markup
+    <header>, <footer>, <nav>, <section>, <main>, <article>,
+        <aside>, <summary>, <details> - behave like div, used to
+        get better structure of a code-->
+    
+    <!--<main> - must be unique to the doc, main can only be one-->
+    <!--<nav> - provides navigation links-->
+    <div id="home">
+        <video autoplay muted loop id="backgroundVideo">
+            <source src="videos/page1Background/page1Background.mp4" type="video/mp4">
+        </video>
+        <nav class="homeNavbar"> <!--fixed,  switches to horizontal when scrolling-->
+            <button id="burger"><i class="fas fa-bars"></i></button>
+            <ul class="navbarList">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#agentRoles">AGENT ROLES</a></li>
+                <li><a href="#contacts">CONTACTS</a></li>
+                <li><a href="Gameplay Guides/gameplayGuides.html">GAMEPLAY GUIDES</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="agentRoles">
+        <div class="slides slideActive">
+            <div class="roleContent">
+                <div>
+                    <img src="images/rolesIcons/duelists.png" alt="">
+                    <h1>Duelists</h1>
+                </div>
+                <p class="roleDesc">Duelists are “self-sufficient fraggers,” according to Riot’s official description. They’re the agents that create some of the most impact, offering aggression to a team comp. A Duelist should be expected to seek out engagements and frag, may that be finding the opening pick or clutching out a round.</p>
+                <p class="readMore">Read more about every duelist</p>
+                <div class="agentNames">
+                    <a id="jettPage">Jett</a>
+                    <a id="reynaPage">Reyna</a>
+                    <a id="phoenixPage">Phoenix</a>
+                    <a>Raze</a>
+                    <a>Yoru</a>
+                </div>
+            </div>
+        </div>
+        <div class="slides">
+            <div class="roleContent">
+                <div>
+                    <img src="images/rolesIcons/controllers.png" alt="">
+                    <h1>controllers</h1>
+                </div>
+                <p class="roleDesc">Controllers are experts in “slicing up dangerous territory to set their team up for success.” This usually comes in the form of smokes, which can be used to offensively or defensively block off a target’s vision but also slows, stuns, and in some cases, flashes.</p>
+                <p class="readMore">Read more about every duelist</p>
+                <div class="agentNames">
+                    <a>Brimstone</a>
+                    <a>Viper</a>
+                    <a>Omen</a>
+                    <a>Astra</a>
+                </div>
+            </div>
+        </div>
+        <div class="slides">
+            <div class="roleContent">
+                <div>
+                    <img src="images/rolesIcons/initiators.png" alt="">
+                    <h1>Initiators</h1>
+                </div>
+                <p class="roleDesc">Initiators “challenge angles by setting up their team to enter contested ground and push defenders away.” These agents often excel on the offensive, setting up their teammates for success. Breach, KAY/O, and Skye offer flashes or stuns in one form or another, while Sova provides vision.</p>
+                <p class="readMore">Read more about every duelist</p>
+                <div class="agentNames">
+                    <a>Sova</a>
+                    <a>Skye</a>
+                    <a>Breach</a>
+                    <a>kayo</a>
+                </div>
+            </div>
+        </div>
+        <div class="slides">
+            <div class="roleContent">
+                <div>
+                    <img src="images/rolesIcons/sentinels.png" alt="">
+                    <h1>Sentinels</h1>
+                </div>
+                <p class="roleDesc">Sentinels are “defensive experts who can lock down areas and watch flanks, both on attack and defender rounds.” In a game dedicated to planting or defusing the Spike, these agents are crucial. Cypher and Killjoy hold down sites with their gizmos and gadgets, while Sage puts a stop to pushes and rotations with slows and barricades.</p>
+                <p class="readMore">Read more about every duelist</p>
+                <div class="agentNames">
+                    <a>killjoy</a>
+                    <a>Sage</a>
+                    <a>Cypher</a>
+                </div>
+            </div>
+        </div>
+        <button id="previousSlide">
+            <img src="images/sliderArrows/arrow.png" alt="">
+        </button>
+        <button id="nextSlide">
+            <img src="images/sliderArrows/arrow.png" alt="">
+        </button>
+    </div>
+
+    <div id="agentCards">
+        <div id="jett" class="agentPage">
+            <div class="agentInfo">
+                <h1 class="agentTitle">Jett</h1>
+                <h6 class="agentRole">
+                    <img src="images/rolesIcons/duelists.png" alt="Duelists">
+                    Duelist
+                </h6>
+                <strong class="country">
+                    Origin:
+                    <img src="images/countries/jett.png" alt="SK">
+                    South Korea
+                </strong>
+                <p>
+                    Jett is an aggressive agent who has a distinctive, sarcastic personality. Jett also has a cheeky, childish "in-your-face" attitude, seen commonly giving insults for feats she makes on the team and is always spouting her sheer amount arrogance. She does show a much more friendly personality towards teammates.
+                </p>
+                <div class="abilities">
+                    <button class="jettOne">
+                        <img src="images/abilitiesIcons/jett/Drift.png" alt="Drift"><br>
+                        DRIFT
+                    </button>
+                    <button>
+                        <img src="images/abilitiesIcons/jett/Cloudburst.png" alt=""><br>
+                        CLOUDBURST
+                    </button>
+                    <button>
+                        <img src="images/abilitiesIcons/jett/Updraft.png" alt=""><br>
+                        UPDRAFT
+                    </button>
+                    <button>
+                        <img src="images/abilitiesIcons/jett/Tailwind.png" alt=""><br>
+                        TAILWIND
+                    </button>
+                    <button>
+                        <img src="images/abilitiesIcons/jett/Blade_Storm.png" alt=""><br>
+                        BLADE STORM
+                    </button>
+                </div>
+            </div>
+            <div class="abilityCard">
+                <figure class="jettOne activeAbility">
+                    <h1>
+                        <img src="images/abilitiesIcons/jett/Drift.png" alt="">
+                        Drift
+                    </h1>
+                    <strong>Type: Passive</strong>
+                    <p>
+                        Holding the jump button while falling allows you to glide through the air.
+                    </p>
+                    <video autoplay loop muted src="videos/agentsAbilities/jett/drift.mp4">
+                    </video>
+                </figure>
+            </div>
+            <button class="close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div id="reyna" class="agentPage">
+            <div class="agentInfo">
+                <h1 class="agentTitle">Reyna</h1>
+                <h6 class="agentRole">
+                    <img src="images/rolesIcons/duelists.png" alt="Duelists">
+                    Duelist
+                </h6>
+                <strong class="country">
+                    Origin:
+                    <img src="images/countries/reyna.png" alt="mexico">
+                    Mexico
+                </strong>
+                <p>
+                    Forged in the heart of Mexico, Reyna dominates single combat, popping off with each kill she scores. Her capability is only limited by her raw skill, making her highly dependent on performance.
+                </p>
+                <div class="abilities">
+                    <button>
+                        <img src="images/abilitiesIcons/reyna/Leer.png" alt="Drift"><br>
+                        LEER
+                    </button>
+                    <button>
+                        <img src="images/abilitiesIcons/reyna/Devour.png" alt=""><br>
+                        DEVOUR
+                    </button>
+                    <button>
+                        <img src="images/abilitiesIcons/reyna/Dismiss.png" alt=""><br>
+                        DISMISS
+                    </button>
+                    <button>
+                        <img src="images/abilitiesIcons/reyna/Empress.png" alt=""><br>
+                        EMPRESS
+                    </button>
+                </div>
+            </div>
+            <div class="abilityCard">
+                <figure id="reynaOne activeAbility">
+                    <h1>
+                        <img src="images/abilitiesIcons/reyna/Leer.png" alt="">
+                        LEER
+                    </h1>
+                    <strong>Type: Basic</strong>
+                    <p>Leer is a Nearsight ability that Reyna must equip before casting. Once equipped, her crosshair will be replaced with an indicator for placing an ethereal eye. The eye will be cast a fixed distance from Reyna's casting position and can travel through terrain.
+                    </p>
+                    <video autoplay loop muted src="videos/agentsAbilities/jett/drift.mp4">
+                    </video>
+                </figure>
+            </div>
+            <button class="close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div id="phoenix" class="agentPage">
+            <div class="agentInfo">
+                <h1 class="agentTitle">Phoenix</h1>
+                <h6 class="agentRole">
+                    <img src="images/rolesIcons/duelists.png" alt="Duelists">
+                    Duelist
+                </h6>
+                <strong class="country">
+                    Origin:
+                    <img src="images/countries/phoenix.png" alt="uk">
+                    United Kingdom
+                </strong>
+                <p>
+                    Hailing from the U.K., Phoenix's star power shines through in his fighting style, igniting the battlefield with flash and flare. Whether he's got backup or not, he'll rush into a fight on his own terms.
+                </p>
+                <div class="abilities">
+                    <button>
+                        <img src="images/abilitiesIcons/phoenix/Blaze.png" alt="Drift"><br>
+                        BLAZE
+                    </button>
+                    <button>
+                        <img src="images/abilitiesIcons/phoenix/Curveball.png" alt=""><br>
+                        CURVEBALL
+                    </button>
+                    <button>
+                        <img src="images/abilitiesIcons/phoenix/Hot_Hands.png" alt=""><br>
+                        HOT HANDS
+                    </button>
+                    <button>
+                        <img src="images/abilitiesIcons/phoenix/Run_It_Back.png" alt=""><br>
+                        RUN IT BACK
+                    </button>
+                </div>
+            </div>
+            <div class="abilityCard">
+                <figure id="phoenixOne activeAbility">
+                    <h1>
+                        <img src="images/abilitiesIcons/phoenix/Blaze.png" alt="">
+                        BLAZE
+                    </h1>
+                    <strong>Type: Basic</strong>
+                    <p>Blaze is primarily a Vision Blocker ability that Phoenix must equip before casting. Upon casting, he will create a line of flames that moves forward along horizontal ground.</p>
+                    <video autoplay loop muted src="videos/agentsAbilities/jett/drift.mp4">
+                    </video>
+                </figure>
+            </div>
+            <button class="close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div id="raze" class="agentPage">
+            <div class="agentInfo">
+                <h1 class="agentTitle">Raze</h1>
+                <h6 class="agentRole">
+                    <img src="images/rolesIcons/duelists.png" alt="Duelists">
+                    Duelist
+                </h6>
+                <strong class="country">
+                    Origin:
+                    <img src="images/countries/raze.png" alt="SK">
+                    Brazil
+                </strong>
+                <p>
+                    Raze explodes out of Brazil with her big personality and big guns. With her blunt-force-trauma playstyle, she excels at flushing entrenched enemies and clearing tight spaces with a generous dose of “boom.”
+                </p>
+                <div class="abilities">
+                    <button>
+                        <img src="images/abilitiesIcons/raze/Boom_Bot.png" alt="Drift"><br>
+                        BOOM BOT
+                    </button>
+                    <button>
+                        <img src="images/abilitiesIcons/raze/Blast_Pack.png" alt=""><br>
+                        BLAST PACK
+                    </button>
+                    <button>
+                        <img src="images/abilitiesIcons/raze/Paint_Shells.png" alt=""><br>
+                        PAINT SHELLS
+                    </button>
+                    <button>
+                        <img src="images/abilitiesIcons/raze/Showstopper.png" alt=""><br>
+                        SHOWSTOPPER
+                    </button>
+                </div>
+            </div>
+            <div class="abilityCard">
+                <figure id="razeOne activeAbility">
+                    <h1>
+                        <img src="images/abilitiesIcons/raze/Boom_Bot.png" alt="">
+                        BOOM BOT
+                    </h1>
+                    <strong>Type: Basic</strong>
+                    <p>Boom Bot is an Intel ability that Raze must equip before casting. The bot will bounce off of any walls it comes into contact with. While active, the bots scans for any enemy agents within a large frontal cone.
+                    </p>
+                    <video autoplay loop muted src="videos/agentsAbilities/jett/drift.mp4">
+                    </video>
+                </figure>
+            </div>
+            <button class="close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div id="yoru" class="agentPage">
+            <div class="agentInfo">
+                <h1 class="agentTitle">Yoru</h1>
+                <h6 class="agentRole">
+                    <img src="images/rolesIcons/duelists.png" alt="Duelists">
+                    Duelist
+                </h6>
+                <strong class="country">
+                    Origin:
+                    <img src="images/countries/yoru.png" alt="SK">
+                    Japan
+                </strong>
+                <p>
+                    Japanese native Yoru rips holes straight through reality to infiltrate enemy lines unseen. Using deception and aggression in equal measure, he gets the drop on each target before they know where to look.
+                </p>
+                <div class="abilities">
+                    <button>
+                        <img src="images/abilitiesIcons/yoru/Fakeout.png" alt="Drift"><br>
+                        FAKEOUT
+                    </button>
+                    <button>
+                        <img src="images/abilitiesIcons/yoru/Blindside.png" alt=""><br>
+                        BLINDSIDE
+                    </button>
+                    <button>
+                        <img src="images/abilitiesIcons/yoru/Gatecrash.png" alt=""><br>
+                        GATECRASH
+                    </button>
+                    <button>
+                        <img src="images/abilitiesIcons/yoru/Dimensional_Drift.png" alt=""><br>
+                        DIMENSIONAL DRIFT
+                    </button>
+                </div>
+            </div>
+            <div class="abilityCard">
+                <figure id="yoruOne activeAbility">
+                    <h1>
+                        <img src="images/abilitiesIcons/yoru/Fakeout.png" alt="">
+                        Fakeout
+                    </h1>
+                    <strong>Type: Basic</strong>
+                    <p>Fakeout is an ability that Yoru must equip before casting. Upon activation, he deploys an echo that walks directly forward, mimicking an Agent's footsteps.
+                    </p>
+                    <video autoplay loop muted src="videos/agentsAbilities/jett/drift.mp4">
+                    </video>
+                </figure>
+            </div>
+            <button class="close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div id="brimstone" class="agentPage">
+            <div class="agentInfo">
+                <h1 class="agentTitle"> Brimstone</h1>
+                <h6 class="agentRole">
+                    <img src="images/rolesIcons/duelists.png" alt="Duelists">
+                    Controller
+                </h6>
+                <strong class="country">
+                    Origin:
+                    <img src="images/countries/brimstone.png" alt="SK">
+                    United States
+                </strong>
+                <p>
+                    Joining from the USA, Brimstone's orbital arsenal ensures his squad always has the advantage. His ability to deliver utility precisely and from a distance make him an unmatched boots-on-the-ground commander.
+                </p>
+                <div class="abilities">
+                    <button>
+                        <img src="images/abilitiesIcons/brimstone/Stim_Beacon.png" alt="Drift"><br>
+                        STIM BEACON
+                    </button>
+                    <button>
+                        <img src="images/abilitiesIcons/brimstone/Incendiary.png" alt=""><br>
+                        INCENDIARY
+                    </button>
+                    <button>
+                        <img src="images/abilitiesIcons/brimstone/Sky_Smoke.png" alt=""><br>
+                        SKY SMOKE
+                    </button>
+                    <button>
+                        <img src="images/abilitiesIcons/brimstone/Orbital_Strike.png" alt=""><br>
+                        ORBITAL STRIKE
+                    </button>
+                </div>
+            </div>
+            <div class="abilityCard">
+                <figure id="brimstoneOne activeAbility">
+                    <h1>
+                        <img src="images/abilitiesIcons/brimstone/Stim_Beacon.png" alt="">
+                        STIM BEACON
+                    </h1>
+                    <strong>Type: Basic</strong>
+                    <p>Stim Beacon is an Empowerment ability that Brimstone instantly tosses forward on activation. Once it lands on the ground, the beacon will create a field that grants all players within it a RapidFire buff, which increases the player's fire rate.
+                    </p>
+                    <video autoplay loop muted src="videos/agentsAbilities/jett/drift.mp4">
+                    </video>
+                </figure>
+            </div>
+            <button class="close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div id="viper" class="agentPage">
+            <div class="agentInfo">
+                <h1 class="agentTitle">Viper</h1>
+                <h6 class="agentRole">
+                    <img src="images/rolesIcons/duelists.png" alt="Duelists">
+                    Controller
+                </h6>
+                <strong class="country">
+                    Origin:
+                    <img src="images/countries/brimstone.png" alt="us">
+                    United States
+                </strong>
+                <p>
+                    The American chemist, Viper deploys an array of poisonous chemical devices to control the battlefield and cripple the enemy's vision. If the toxins don't kill her prey, her mind games surely will.
+                </p>
+                <div class="abilities">
+                    <button>
+                        <img src="images/abilitiesIcons/viper/Snake_Bite.png" alt=""><br>
+                        SNAKE BITE
+                    </button>
+                    <button>
+                        <img src="images/abilitiesIcons/viper/Poison_Cloud.png" alt=""><br>
+                        POISON CLOUD
+                    </button>
+                    <button>
+                        <img src="images/abilitiesIcons/viper/Toxic_Screen.png" alt=""><br>
+                        TOXIC SCREEN
+                    </button>
+                    <button>
+                        <img src="images/abilitiesIcons/viper/Pit.png" alt=""><br>
+                        VIPER'S PIT
+                    </button>
+                </div>
+            </div>
+            <div class="abilityCard">
+                <figure id="viperOne activeAbility">
+                    <h1>
+                        <img src="images/abilitiesIcons/viper/Snake_Bite.png" alt="">
+                        snake bite
+                    </h1>
+                    <strong>Type: Passive</strong>
+                    <p>Fuel is a passive for Viper which gives her 100 Fuel. Activating Poison Cloud or Toxic Screen requires Viper to consume Fuel at a rate of 1 every 0.15 seconds (6.667/sec).
+                    </p>
+                    <video autoplay loop muted src="videos/agentsAbilities/jett/drift.mp4">
+                    </video>
+                </figure>
+            </div>
+            <button class="close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div id="omen" class="agentPage">
+            <div class="agentInfo">
+                <h1 class="agentTitle">Omen</h1>
+                <h6 class="agentRole">
+                    <img src="images/rolesIcons/duelists.png" alt="Duelists">
+                    Controller
+                </h6>
+                <strong class="country">
+                    Origin:
+                    Unknown
+                </strong>
+                <p>
+                    A phantom of a memory, Omen hunts in the shadows. He renders enemies blind, teleports across the field, then lets paranoia take hold as his foe scrambles to learn where he might strike next.
+                </p>
+                <div class="abilities">
+                    <button>
+                        <img src="images/abilitiesIcons/omen/Shrouded_Step.png" alt="Drift"><br>
+                        SHROUDED STEP
+                    </button>
+                    <button>
+                        <img src="images/abilitiesIcons/omen/Paranoia.png" alt=""><br>
+                        PARANOIA
+                    </button>
+                    <button>
+                        <img src="images/abilitiesIcons/omen/Dark_Cover.png" alt=""><br>
+                        DARK COVER
+                    </button>
+                    <button>
+                        <img src="images/abilitiesIcons/omen/From_the_Shadows.png" alt=""><br>
+                        FROM THE SHADOWS
+                    </button>
+                </div>
+            </div>
+            <div class="abilityCard">
+                <figure id="omenOne activeAbility">
+                    <h1>
+                        <img src="images/abilitiesIcons/omen/Shrouded_Step.png" alt="">
+                        SHROUDED STEP
+                    </h1>
+                    <strong>Type: Basic</strong>
+                    <p>Shrouded Step is a Mobility ability that Omen must equip before casting. Once equipped, his crosshair will be replaced with an indicator that shows a target destination to teleport to.
+                    </p>
+                    <video autoplay loop muted src="videos/agentsAbilities/jett/drift.mp4">
+                    </video>
+                </figure>
+            </div>
+            <button class="close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div id="astra" class="agentPage">
+            <div class="agentInfo">
+                <h1 class="agentTitle">Astra</h1>
+                <h6 class="agentRole">
+                    <img src="images/rolesIcons/duelists.png" alt="Duelists">
+                    Controller
+                </h6>
+                <strong class="country">
+                    Origin:
+                    <img src="images/countries/astra.png" alt="ghana">
+                    Ghana
+                </strong>
+                <p>
+                    Ghanaian Agent Astra harnesses the energies of the cosmos to reshape battlefields to her whim. With full command of her astral form and a talent for deep strategic foresight, she’s always eons ahead of her enemy’s next move.
+                </p>
+                <div class="abilities">
+                    <button>
+                        <img src="images/abilitiesIcons/astra/Gravity_Well.png" alt="Drift"><br>
+                        Gravity Well
+                    </button>
+                    <button>
+                        <img src="images/abilitiesIcons/astra/Nova_Pulse.png" alt=""><br>
+                        Nova Pulse
+                    </button>
+                    <button>
+                        <img src="images/abilitiesIcons/astra/Nebula_-_Dissipate.png" alt=""><br>
+                        Nebula / Dissipate
+                    </button>
+                    <button>
+                        <img src="images/abilitiesIcons/astra/Astral_Form.png" alt=""><br>
+                        Astral Form
+                    </button>
+                    <button>
+                        <img src="images/abilitiesIcons/jett/Blade_Storm.png" alt=""><br>
+                        Cosmic Divide
+                    </button>
+                </div>
+            </div>
+            <div class="abilityCard">
+                <figure id="astraOne activeAbility">
+                    <h1>
+                        <img src="images/abilitiesIcons/astra/Gravity_Well.png" alt="">
+                        Gravity Well
+                    </h1>
+                    <strong>Type: Basic</strong>
+                    <p>Gravity Well is a Crowd Control ability that Astra can instantly activate by targeting a Star that she has placed on the map. A Gravity Well will form on activation, pulling any agents within its radius towards the center.
+                    </p>
+                    <video autoplay loop muted src="videos/agentsAbilities/jett/drift.mp4">
+                    </video>
+                </figure>
+            </div>
+            <button class="close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div id="sova" class="agentPage">
+            <div class="agentInfo">
+                <h1 class="agentTitle">Sova</h1>
+                <h6 class="agentRole">
+                    <img src="images/rolesIcons/duelists.png" alt="Duelists">
+                    Initiator
+                </h6>
+                <strong class="country">
+                    Origin:
+                    <img src="images/countries/sova.png" alt="russia">
+                    Russia
+                </strong>
+                <p>
+                    Born from the eternal winter of Russia's tundra, Sova tracks, finds, and eliminates enemies with ruthless efficiency and precision. His custom bow and incredible scouting abilities ensure that even if you run, you cannot hide.
+                </p>
+                <div class="abilities">
+                    <button>
+                        <img src="images/abilitiesIcons/sova/Owl_Drone.png" alt="Drift"><br>
+                        Owl Drone
+                    </button>
+                    <button>
+                        <img src="images/abilitiesIcons/sova/Shock_Bolt.png" alt=""><br>
+                        Shock Bolt
+                    </button>
+                    <button>
+                        <img src="images/abilitiesIcons/sova/Recon_Bolt.png" alt=""><br>
+                        Recon Bolt
+                    </button>
+                    <button>
+                        <img src="images/abilitiesIcons/sova/Hunter.png" alt=""><br>
+                        Hunter's Fury
+                    </button>
+                </div>
+            </div>
+            <div class="abilityCard">
+                <figure id="sovaOne activeAbility">
+                    <h1>
+                        <img src="images/abilitiesIcons/sova/Owl_Drone.png" alt="">
+                        Owl Drone
+                    </h1>
+                    <strong>Type: Basic</strong>
+                    <p>Owl Drone is an Intel ability that Sova must equip before casting. Upon casting he deploys an owl drone that he takes control of.
+                    </p>
+                    <video autoplay loop muted src="videos/agentsAbilities/jett/drift.mp4">
+                    </video>
+                </figure>
+            </div>
+            <button class="close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div id="skye" class="agentPage">
+            <div class="agentInfo">
+                <h1 class="agentTitle">Skye</h1>
+                <h6 class="agentRole">
+                    <img src="images/rolesIcons/duelists.png" alt="Duelists">
+                    Initiator
+                </h6>
+                <strong class="country">
+                    Origin:
+                    <img src="images/countries/skye.png" alt="australia">
+                    Australia
+                </strong>
+                <p>
+                    Hailing from Australia, Skye and her band of beasts trail-blaze the way through hostile territory. With her creations hampering the enemy, and her power to heal others, the team is strongest and safest by Skye's side.
+                </p>
+                <div class="abilities">
+                    <button>
+                        <img src="images/abilitiesIcons/skye/Regrowth.png" alt="Drift"><br>
+                        Regrowth
+                    </button>
+                    <button>
+                        <img src="images/abilitiesIcons/skye/Trailblazer.png" alt=""><br>
+                        Trailblazer
+                    </button>
+                    <button>
+                        <img src="images/abilitiesIcons/skye/Guiding_Light.png" alt=""><br>
+                        Guiding Light
+                    </button>
+                    <button>
+                        <img src="images/abilitiesIcons/skye/Seekers.png" alt=""><br>
+                        Seekers
+                    </button>
+                </div>
+            </div>
+            <div class="abilityCard">
+                <figure>
+                    <h1>
+                        <img src="images/abilitiesIcons/skye/Regrowth.png" alt="">
+                        Regrowth
+                    </h1>
+                    <strong>Type: Basic</strong>
+                    <p>Regrowth is a Sustain ability that Skye must equip before casting. Upon casting, she emits a healing aura that heals ally agents in range.
+                    </p>
+                    <video autoplay loop muted src="videos/agentsAbilities/jett/drift.mp4">
+                    </video>
+                </figure>
+            </div>
+            <button class="close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div id="breach" class="agentPage">
+            <div class="agentInfo">
+                <h1 class="agentTitle">Breach</h1>
+                <h6 class="agentRole">
+                    <img src="images/rolesIcons/duelists.png" alt="Duelists">
+                    Initiator
+                </h6>
+                <strong class="country">
+                    Origin:
+                    <img src="images/countries/breach.png" alt="sweden">
+                    Sweden
+                </strong>
+                <p>
+                    Breach, the bionic Swede, fires powerful, targeted kinetic blasts to aggressively clear a path through enemy ground. The damage and disruption he inflicts ensures no fight is ever fair.
+                </p>
+                <div class="abilities">
+                    <button>
+                        <img src="images/abilitiesIcons/breach/Aftershock.png" alt="Drift"><br>
+                        Aftershock
+                    </button>
+                    <button>
+                        <img src="images/abilitiesIcons/breach/Flashpoint.png" alt=""><br>
+                        Flashpoint
+                    </button>
+                    <button>
+                        <img src="images/abilitiesIcons/breach/Fault_Line.png" alt=""><br>
+                        Fault Line
+                    </button>
+                    <button>
+                        <img src="images/abilitiesIcons/breach/Rolling_Thunder.png" alt=""><br>
+                        Rolling Thunder
+                    </button>
+                </div>
+            </div>
+            <div class="abilityCard">
+                <figure id="breachOne activeAbility">
+                    <h1>
+                        <img src="images/abilitiesIcons/breach/Aftershock.png" alt="">
+                        Aftershock
+                    </h1>
+                    <strong>Type: Basic</strong>
+                    <p>Aftershock is a Deterrent ability that Breach has to equip before casting. To cast, Breach must take aim at a wall using a custom crosshair.
+                    </p>
+                    <video autoplay loop muted src="videos/agentsAbilities/jett/drift.mp4">
+                    </video>
+                </figure>
+            </div>
+            <button class="close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div id="kayo" class="agentPage">
+            <div class="agentInfo">
+                <h1 class="agentTitle">KAY/O</h1>
+                <h6 class="agentRole">
+                    <img src="images/rolesIcons/duelists.png" alt="Duelists">
+                    Initiator
+                </h6>
+                <strong class="country">
+                    Origin:
+                    Alternate Timeline Earth
+                </strong>
+                <p>
+                    KAY/O is a machine of war built for a single purpose: neutralizing radiants. His power to suppress enemy abilities cripples his opponents' capacity to fight back, securing him and his allies the ultimate edge.
+                </p>
+                <div class="abilities">
+                    <button>
+                        <img src="images/abilitiesIcons/kayo/FRAG-ment.png" alt="Drift"><br>
+                        FRAG/ment
+                    </button>
+                    <button>
+                        <img src="images/abilitiesIcons/kayo/FLASH-drive.png" alt=""><br>
+                        FLASH/drive
+                    </button>
+                    <button>
+                        <img src="images/abilitiesIcons/kayo/ZERO-point.png" alt=""><br>
+                        ZERO/point
+                    </button>
+                    <button>
+                        <img src="images/abilitiesIcons/kayo/NULL-cmd.png" alt=""><br>
+                        NULL/cmd
+                    </button>
+                </div>
+            </div>
+            <div class="abilityCard">
+                <figure id="kayoOne activeAbility">
+                    <h1>
+                        <img src="images/abilitiesIcons/kayo/FRAG-ment.png" alt="">
+                        FRAG/ment
+                    </h1>
+                    <strong>Type: Basic</strong>
+                    <p>FRAG/ment is a Deterrent ability that KAY/O must equip before casting. Upon casting, KAY/O will throw a fragment that sticks as soon as it comes into contact with a horizontal surface.
+                    </p>
+                    <video autoplay loop muted src="videos/agentsAbilities/jett/drift.mp4">
+                    </video>
+                </figure>
+            </div>
+            <button class="close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div id="killjoy" class="agentPage">
+            <div class="agentInfo">
+                <h1 class="agentTitle">Killjoy</h1>
+                <h6 class="agentRole">
+                    <img src="images/rolesIcons/duelists.png" alt="Duelists">
+                    Sentinel
+                </h6>
+                <strong class="country">
+                    Origin:
+                    <img src="images/countries/killjoy.png" alt="germany">
+                    Germany
+                </strong>
+                <p>
+                    The genius of Germany, Killjoy secures the battlefield with ease using her arsenal of inventions. If the damage from her gear doesn't stop her enemies, her robots debuff will help make short work of them.
+                </p>
+                <div class="abilities">
+                    <button>
+                        <img src="images/abilitiesIcons/killjoy/Alarmbot.png" alt="Drift"><br>
+                        Alarmbot
+                    </button>
+                    <button>
+                        <img src="images/abilitiesIcons/killjoy/Nanoswarm.png" alt=""><br>
+                        Nanoswarm
+                    </button>
+                    <button>
+                        <img src="images/abilitiesIcons/killjoy/Turret.png" alt=""><br>
+                        Turret
+                    </button>
+                    <button>
+                        <img src="images/abilitiesIcons/killjoy/Lockdown.png" alt=""><br>
+                        Lockdown
+                    </button>
+                </div>
+            </div>
+            <div class="abilityCard">
+                <figure id="killjoyOne activeAbility">
+                    <h1>
+                        <img src="images/abilitiesIcons/killjoy/Alarmbot.png" alt="">
+                        Alarmbot
+                    </h1>
+                    <strong>Type: Basic</strong>
+                    <p>Alarmbot is an Intel ability that Killjoy must equip before casting. Once equipped, her crosshair will be replaced with an indicator for placing a bot.
+                    </p>
+                    <video autoplay loop muted src="videos/agentsAbilities/jett/drift.mp4">
+                    </video>
+                </figure>
+            </div>
+            <button class="close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div id="sage" class="agentPage">
+            <div class="agentInfo">
+                <h1 class="agentTitle">Sage</h1>
+                <h6 class="agentRole">
+                    <img src="images/rolesIcons/duelists.png" alt="Duelists">
+                    Sentinel
+                </h6>
+                <strong class="country">
+                    Origin:
+                    <img src="images/countries/sage.png" alt="china">
+                    China
+                </strong>
+                <p>
+                    The stronghold of China, Sage creates safety for herself and her team wherever she goes. Able to revive fallen friends and stave off aggressive pushes, she provides a calm center to a hellish fight.
+                </p>
+                <div class="abilities">
+                    <button>
+                        <img src="images/abilitiesIcons/sage/Barrier_Orb.png" alt="Drift"><br>
+                        Barrier Orb
+                    </button>
+                    <button>
+                        <img src="images/abilitiesIcons/sage/Slow_Orb.png" alt=""><br>
+                        Slow Orb
+                    </button>
+                    <button>
+                        <img src="images/abilitiesIcons/sage/Healing_Orb.png" alt=""><br>
+                        Healing Orb
+                    </button>
+                    <button>
+                        <img src="images/abilitiesIcons/sage/Resurrection.png" alt=""><br>
+                        Resurrection
+                    </button>
+                </div>
+            </div>
+            <div class="abilityCard">
+                <figure id="sageOne activeAbility">
+                    <h1>
+                        <img src="images/abilitiesIcons/sage/Barrier_Orb.png" alt="">
+                        Barrier Orb
+                    </h1>
+                    <strong>Type: Basic</strong>
+                    <p>Barrier Orb is a Vision Blocker ability that Sage must equip before casting. Once equipped, her crosshair will be replaced with an indicator for placing a wall.
+                    </p>
+                    <video autoplay loop muted src="videos/agentsAbilities/jett/drift.mp4">
+                    </video>
+                </figure>
+            </div>
+            <button class="close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div id="cypher" class="agentPage">
+            <div class="agentInfo">
+                <h1 class="agentTitle">Cypher</h1>
+                <h6 class="agentRole">
+                    <img src="images/rolesIcons/duelists.png" alt="Duelists">
+                    Sentinel
+                </h6>
+                <strong class="country">
+                    Origin:
+                    <img src="images/countries/cypher.png" alt="morocco">
+                    Morocco
+                </strong>
+                <p>
+                    The Moroccan information broker, Cypher is a one-man surveillance network who keeps tabs on the enemy’s every move. No secret is safe. No maneuver goes unseen. Cypher is always watching.
+                </p>
+                <div class="abilities">
+                    <button>
+                        <img src="images/abilitiesIcons/cypher/Trapwire.png" alt="Drift"><br>
+                        Trapwire
+                    </button>
+                    <button>
+                        <img src="images/abilitiesIcons/cypher/Cyber_Cage.png" alt=""><br>
+                        Cyber Cage
+                    </button>
+                    <button>
+                        <img src="images/abilitiesIcons/cypher/Spycam.png" alt=""><br>
+                        Spycam
+                    </button>
+                    <button>
+                        <img src="images/abilitiesIcons/cypher/Neural_Theft.png" alt=""><br>
+                        Neural Theft
+                    </button>
+                </div>
+            </div>
+            <div class="abilityCard">
+                <figure id="cypherOne activeAbility">
+                    <h1>
+                        <img src="images/abilitiesIcons/cypher/Trapwire.png" alt="">
+                        Trapwire
+                    </h1>
+                    <strong>Type: Basic</strong>
+                    <p>Trapwire is primarily an Intel ability that Cypher has to equip before casting. Once equipped, his crosshair will be replaced with an indicator for placing a trapwire.
+                    </p>
+                    <video autoplay loop muted src="videos/agentsAbilities/jett/drift.mp4">
+                    </video>
+                </figure>
+            </div>
+            <button class="close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+
+    <footer id="contacts">
+        <div id="roles">
+            <p class="footerTitle">Roles</p>
+            <div>
+                <a href="">Duelists</a>
+                <a href="">Controllers</a>
+                <a href="">Sentinels</a>
+                <a href="">Initiators</a>
+            </div>
+        </div>
+        <div id="agents">
+            <p class="footerTitle">Agents</p>
+            <div>
+                <a href="">Brimstone</a>
+                <a href="">KAY/O</a>
+                <a href="">Sova</a>
+                <a href="">Raze</a>
+            </div>
+            <div>
+                <a href="">Cypher</a>
+                <a href="">Jett</a>
+                <a href="">Skye</a>
+                <a href="">Phoenix</a>
+            </div>
+            <div>
+                <a href="">Breach</a>
+                <a href="">Yoru</a>
+                <a href="">Reyna</a>
+                <a href="">Killjoy</a>
+            </div>
+            <div>
+                <a href="">Astra</a>
+                <a href="">Viper</a>
+                <a href="">Sage</a>
+                <a href="">Omen</a>
+            </div>
+        </div>
+            
+        <a id="homeContacts" class="footerTitle">Home</a>
+
+        <a id="contactsLink" class="footerTitle">Contacts</a>
+        <div id="links">
+            <img src="images/valorantLogo/valorantLogo.png" alt="">
+            <p>The interface and design developed by:
+                natasha_kim5@yahoo.com
+            </p>
+            <p>Github:
+                <a href="https://github.com/mableee1?tab=repositories">https://github.com/mableee1?tab=repositories</a>
+            </p>
+            <p>Credit:
+                <a href="https://www.riotgames.com/">Riot Games, Inc.</a>
+            </p>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
