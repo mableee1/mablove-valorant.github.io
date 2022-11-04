@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Pragati+Narrow&display=swap"
+        rel="stylesheet">
+    <link href='https://css.gg/css' rel='stylesheet'>
+    <link rel="stylesheet" href="gameplayGuides.css">
+    <link type="image/png" sizes="16x16" rel="icon" href="https://img.icons8.com/plasticine/100/000000/valorant.png">
+    <title>Gameplay Guides</title>
+</head>
+
+<body>
+    <header id="navContainer">
+        <nav>
+            <!--горизонтальный-->
+            <div class="menuContainer">
+                <a title="Riot Games, Public domain, via Wikimedia Commons"
+                    href="https://commons.wikimedia.org/wiki/File:Valorant_logo_-_pink_color_version.svg"><img
+                        alt="Valorant logo - pink color version" class="valorantLogo"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Valorant_logo_-_pink_color_version.svg/512px-Valorant_logo_-_pink_color_version.svg.png"></a>
+                <div class="optionContainer">
+                    <li>
+                        <a href="">home</a>
+                    </li>
+                    <!--ссылка на главную страницу-->
+                    <li>
+                        <a href="#agentGuides">agent guides</a>
+                    </li>
+                    <li>
+                        <a href="#gameplayGuidesContacts">contacts</a>
+                    </li>
+                </div>
+            </div>
+            <!--search bar справа-->
+            <div class="searchContainer">
+                <input type="text" placeholder="Search by name, tag #, etc." class="searchBar">
+                <button class="searchButton">
+                    <i class="gg-search"></i>
+                </button>
+            </div>
+            <button class="signupButton">
+                <a href="signupPage/signupPage.html" class="signupLink">Sign in</a>
+            </button>
+        </nav>
+    </header>
+
+    <section id="agentGuides">
+        <header>
+            <div id="pageIntro">
+                <h1>Guides to every agent</h1>
+                <p>Here you can find lineups, tricks and guides for every agent. Click on an agent's icon to see guides
+                    to this agent.</p>
+            </div>
+        </header>
+
+
+        <section id="agents">
+            <!--сделать функцию для генерации ссылок и имен агентов при загрузке страницы-->
+            <div id="filters">
+                <div>
+                    <label for="agentSelect" id="agentSelectLabel">Agent</label>
+                    <select name="agentSelect" id="agentSelect">
+                        <option value="allAgents">All agents</option>
+                        <option value="astra">Astra</option>
+                        <option value="breach">Breach</option>
+                        <option value="brim">Brimstone</option>
+                        <option value="chamber">Chamber</option>
+                        <option value="cypher">Cypher</option>
+                        <option value="fade">Fade</option>
+                        <option value="jett">Jett</option>
+                        <option value="kayo">KAY/O</option>
+                        <option value="kj">Killjoy</option>
+                        <option value="neon">Neon</option>
+                        <option value="omen">Omen</option>
+                        <option value="phoenix">Phoenix</option>
+                        <option value="raze">Raze</option>
+                        <option value="reyna">Reyna</option>
+                        <option value="sage">Sage</option>
+                        <option value="skye">Skye</option>
+                        <option value="sova">Sova</option>
+                        <option value="viper">Viper</option>
+                        <option value="yoru">Yoru</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="roleSelect" id="roleSelectLabel">Role</label>
+                    <select name="roleSelect" id="roleSelect">
+                        <option value="allRoles">All roles</option>
+                        <option value="duelist">Duelists</option>
+                        <option value="initiator">Initiators</option>
+                        <option value="controller">Controllers</option>
+                        <option value="sentinel">Sentinels</option>
+                    </select>
+                </div>
+            </div>
+            <div class="addGuideButtonContainer">
+                <button onclick="window.location.href=''" class="addGuideButton">
+                    Add guide
+                </button>
+            </div>
+            <div id="agentList">
+                <!--добавить неоморфизм на каждый контейнер агента "bookmarks"-->
+                    <div class="agentLi brim controller">
+                        <div class="iconContainer">
+                            <img src="https://static.wikia.nocookie.net/valorant/images/4/4d/Brimstone_icon.png" alt="">
+                        </div>
+                        <div class="agentDesc">
+                            <a href="">Brimstone</a>
+                            <a href="">Controller</a>
+                            <img src="" alt="">
+                        </div>
+                        <button onclick="window.location.href=''" class="guideButton">
+                            See guides
+                        </button>
+                    </div>
+                    <div class="agentLi kayo initiator">
+                        <div class="iconContainer">
+                            <img src="https://static.wikia.nocookie.net/valorant/images/f/f0/KAYO_icon.png" alt="">
+                        </div>
+                        <div class="agentDesc">
+                            <a href="">KAY/O</a>
+                            <a href="">Initiator</a>
+                        </div>
+                        <button onclick="window.location.href=''" class="guideButton">
+                            See guides
+                        </button>
+                    </div>
+                    <div class="agentLi sova initiator">
+                        <div class="iconContainer">
+                            <img src="https://static.wikia.nocookie.net/valorant/images/4/49/Sova_icon.png" alt="">
+                        </div>
+                        <div class="agentDesc">
+                            <a href="">Sova</a>
+                            <a href="">Initiator</a>
+                        </div>
+                        <button onclick="window.location.href=''" class="guideButton">
+                            See guides
+                        </button>
+                    </div>
+                    <div class="agentLi raze duelist">
+                        <div class="iconContainer">
+                            <img src="https://static.wikia.nocookie.net/valorant/images/9/9c/Raze_icon.png" alt="">
+                        </div>
+                        <div class="agentDesc">
+                            <a href="">Raze</a>
+                            <a href="">Duelist</a>
+                        </div>
+                        <button onclick="window.location.href=''" class="guideButton">
+                            See guides
+                        </button>
+                    </div>
+                    <div class="agentLi neon duelist">
+                        <div class="iconContainer">
+                            <img src="https://static.wikia.nocookie.net/valorant/images/d/d0/Neon_icon.png" alt="">
+                        </div>
+                        <div class="agentDesc">
+                            <a href="">Neon</a>
+                            <a href="">Duelist</a>
+                        </div>
+                        <button onclick="window.location.href=''" class="guideButton">
+                            See guides
+                        </button>
+                    </div>
+            
+                    <div class="agentLi cypher sentinel">
+                        <div class="iconContainer">
+                            <img src="https://static.wikia.nocookie.net/valorant/images/8/88/Cypher_icon.png" alt="">
+                        </div>
+                        <div class="agentDesc">
+                            <a href="">Cypher</a>
+                            <a href="">Sentinel</a>
+                        </div>
+                        <button onclick="window.location.href=''" class="guideButton">
+                            See guides
+                        </button>
+                    </div>
+                    <div class="agentLi jett duelist">
+                        <div class="iconContainer">
+                            <img src="https://static.wikia.nocookie.net/valorant/images/3/35/Jett_icon.png" alt="">
+                        </div>
+                        <div class="agentDesc">
+                            <a href="">Jett</a>
+                            <a href="">Duelist</a>
+                        </div>
+                        <button onclick="window.location.href=''" class="guideButton">
+                            See guides
+                        </button>
+                    </div>
+                    <div class="agentLi skye initiator">
+                        <div class="iconContainer">
+                            <img src="https://static.wikia.nocookie.net/valorant/images/3/33/Skye_icon.png" alt="">
+                        </div>
+                        <div class="agentDesc">
+                            <a href="">Skye</a>
+                            <a href="">Initiator</a>
+                        </div>
+                        <button onclick="window.location.href=''" class="guideButton">
+                            See guides
+                        </button>
+                    </div>
+                    <div class="agentLi phoenix duelist">
+                        <div class="iconContainer">
+                            <img src="https://static.wikia.nocookie.net/valorant/images/1/14/Phoenix_icon.png" alt="">
+                        </div>
+                        <div class="agentDesc">
+                            <a href="">Phoenix</a>
+                            <a href="">Duelist</a>
+                        </div>
+                        <button onclick="window.location.href=''" class="guideButton">
+                            See guides
+                        </button>
+                    </div>
+                    <div class="agentLi fade initiator">
+                        <div class="iconContainer">
+                            <img src="https://static.wikia.nocookie.net/valorant/images/a/a6/Fade_icon.png" alt="">
+                        </div>
+                        <div class="agentDesc">
+                            <a href="">Fade</a>
+                            <a href="">Initiator</a>
+                        </div>
+                        <button onclick="window.location.href=''" class="guideButton">
+                            See guides
+                        </button>
+                    </div>
+                
+                    <div class="agentLi breach initiator">
+                        <div class="iconContainer">
+                            <img src="https://static.wikia.nocookie.net/valorant/images/5/53/Breach_icon.png" alt="">
+                        </div>
+                        <div class="agentDesc">
+                            <a href="">Breach</a>
+                            <a href="">Initiator</a>
+                        </div>
+                        <button onclick="window.location.href=''" class="guideButton">
+                            See guides
+                        </button>
+                    </div>
+                    <div class="agentLi yoru duelist">
+                        <div class="iconContainer">
+                            <img src="https://static.wikia.nocookie.net/valorant/images/d/d4/Yoru_icon.png" alt="">
+                        </div>
+                        <div class="agentDesc">
+                            <a href="">Yoru</a>
+                            <a href="">Duelist</a>
+                        </div>
+                        <button onclick="window.location.href=''" class="guideButton">
+                            See guides
+                        </button>
+                    </div>
+                    <div class="agentLi reyna duelist">
+                        <div class="iconContainer">
+                            <img src="https://static.wikia.nocookie.net/valorant/images/b/b0/Reyna_icon.png" alt="">
+                        </div>
+                        <div class="agentDesc">
+                            <a href="">Reyna</a>
+                            <a href="">Dueslist</a>
+                        </div>
+                        <button onclick="window.location.href=''" class="guideButton">
+                            See guides
+                        </button>
+                    </div>
+                    <div class="agentLi kj sentinel">
+                        <div class="iconContainer">
+                            <img src="https://static.wikia.nocookie.net/valorant/images/1/15/Killjoy_icon.png" alt="">
+                        </div>
+                        <div class="agentDesc">
+                            <a href="">Killjoy</a>
+                            <a href="">Sentinel</a>
+                        </div>
+                        <button onclick="window.location.href=''" class="guideButton">
+                            See guides
+                        </button>
+                    </div>
+                    <div class="agentLi chamber sentinel">
+                        <div class="iconContainer">
+                            <img src="https://static.wikia.nocookie.net/valorant/images/0/09/Chamber_icon.png" alt="">
+                        </div>
+                        <div class="agentDesc">
+                            <a href="">Chamber</a>
+                            <a href="">Sentinel</a>
+                        </div>
+                        <button onclick="window.location.href=''" class="guideButton">
+                            See guides
+                        </button>
+                    </div>
+                    <div class="agentLi astra controller">
+                        <div class="iconContainer">
+                            <img src="https://static.wikia.nocookie.net/valorant/images/0/08/Astra_icon.png" alt="">
+                        </div>
+                        <div class="agentDesc">
+                            <a href="">Astra</a>
+                            <a href="">Controller</a>
+                        </div>
+                        <button onclick="window.location.href=''" class="guideButton">
+                            See guides
+                        </button>
+                    </div>
+                    <div class="agentLi viper controller">
+                        <div class="iconContainer">
+                            <img src="https://static.wikia.nocookie.net/valorant/images/5/5f/Viper_icon.png" alt="">
+                        </div>
+                        <div class="agentDesc">
+                            <a href="">Viper</a>
+                            <a href="">Controller</a>
+                        </div>
+                        <button onclick="window.location.href=''" class="guideButton">
+                            See guides
+                        </button>
+                    </div>
+                    <div class="agentLi sage sentinel">
+                        <div class="iconContainer">
+                            <img src="https://static.wikia.nocookie.net/valorant/images/7/74/Sage_icon.png" alt="">
+                        </div>
+                        <div class="agentDesc">
+                            <a href="">Sage</a>
+                            <a href="">Sentinel</a>
+                        </div>
+                        <button onclick="window.location.href=''" class="guideButton">
+                            See guides
+                        </button>
+                    </div>
+                    <div class="agentLi omen controller">
+                        <div class="iconContainer">
+                            <img src="https://static.wikia.nocookie.net/valorant/images/b/b0/Omen_icon.png" alt="">
+                        </div>
+                        <div class="agentDesc">
+                            <a href="">Omen</a>
+                            <a href="">Conroller</a>
+                        </div>
+                        <button onclick="window.location.href=''" class="guideButton">
+                            See guides
+                        </button>
+                    </div>
+            </div>
+        </section>
+    </section>
+
+    <footer id="gameplayGuidesContacts">
+        <a href="" class="footerTitle">Home</a>
+
+        <a href="#agentGuides" class="footerTitle">Agent guides</a>
+
+        <a href="#gameplayGuidesContacts" class="footerTitle">Contacts</a>
+
+        <div id="links">
+            <img src="https://img.icons8.com/plasticine/100/000000/valorant.png" alt="">
+            <p>The interface and design developed by
+                Natalia Kim (natasha_kim5@yahoo.com)
+            </p>
+            <p>Github:
+                <a href="https://github.com/mableee1?tab=repositories">https://github.com/mableee1?tab=repositories</a>
+            </p>
+            <p>Credit:
+                <a href="https://www.riotgames.com/">Riot Games, Inc.</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="gameplayGuides.js"></script>
+</body>
+
+</html>

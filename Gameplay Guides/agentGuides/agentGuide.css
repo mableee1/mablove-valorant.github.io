@@ -1,0 +1,274 @@
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    scroll-behavior: smooth;
+    background-color: rgb(123,57,74);
+    background: linear-gradient(90deg, rgba(123,57,74,1) 0%, rgba(85,83,111,1) 50%, rgba(68,98,134,1) 100%);
+}
+/* Navbar */
+.navContainer {
+    width: 100vw;
+    top: 0;
+    position: fixed;
+    background-color: transparent;
+    z-index: 1;
+    transition: all .5s ease-in;
+}
+/* On scroll, change the background color of #navContainer */
+.scrolledNav {
+    background-color: #6064ab;
+}
+nav {
+    display: flex;
+    justify-content: flex-start;
+}
+nav a {
+    text-decoration: none;
+}
+nav li {
+    list-style-type: none;
+}
+nav li a {
+    text-transform: uppercase;
+    color: #ffffff;
+}
+.menuContainer {
+    display: flex;
+    width: 50vw;
+    padding: 2vh 0 2vh 0;
+}
+.optionContainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: inherit;
+    font-weight: bold;
+}
+.optionContainer a:hover {
+    color: #ff4454;
+    transition: all .5s ease-out;
+}
+
+.valorantLogo {
+    width: 75px;
+    height: 50px;
+    margin-left: 5vw;
+}
+/* search bar */
+.searchContainer {
+    display: flex;
+    margin-left: auto;
+    padding: 2vh 2vw 2vh 0;
+    align-items: center;
+}
+.searchBar {
+    visibility: hidden;
+    background-color: transparent;
+    border: none;
+    border-bottom: .5px solid #ebe6df;
+    color: #ebe6df;
+    height: 5vh;
+    width: 15vw;
+    margin: 0;
+    padding: 0;
+    font-size: 0.7em;
+}
+.searchBar::placeholder {
+    color: #ebe6df;
+}
+.searchBar:focus {
+    background-color: #ebe6df;
+    color: #0e1721;
+    transition: all .5s ease-out;
+}
+.elementVisibility { /* JS: hide searchBar*/
+    visibility: visible;
+}
+.elementInvisibility {
+    display: none;
+}
+.searchBar::placeholder {
+    font-weight: lighter;
+}
+.searchButton {
+    margin-left: 10px;
+    background-color: transparent;
+    border: none;
+}
+.navContainer .searchButtonHover {
+    color: #6064ab;
+    transition: all .5s;
+}
+/*icon*/
+.gg-search {
+    color: #ebe6df;
+}
+.signinButton {
+    border-radius: 30px;
+    width: 8vw;
+    height: 5vh;
+    background-color: #ff4454;
+    border: none;
+    margin-top: 0.8%;
+    margin-right: 5vw;
+    font-size: 0.8em;
+    transition: all .5s ease-out;
+}
+.signinLink {
+    color: white;
+    transition: all .5s ease-out;
+    font-weight: bold;
+}
+
+
+
+/* Section page background */
+.pageBackground {
+    margin: none;
+    height: 50vh;
+    width: 100%;
+    background-image: url("https://images.alphacoders.com/127/1273541.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 21%;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    box-shadow:  5px 5px 21px #2e2e2e;
+}
+
+
+
+/* Section #content */
+/* #content */
+#content {
+    padding: 0 15vw 0 15vw;
+}
+/* filters */
+#filters {
+    padding-top: 10vh;    
+    width: 50vw;
+    display: flex;
+    margin: auto;
+    justify-content: space-evenly;
+}
+.filterContainer {
+    display: flex;
+    flex-direction: column;
+}
+.filterContainer select:hover {
+    cursor: pointer;
+}
+.filterContainer label {
+    color: white;
+    padding-bottom: 1vh;
+    font-weight: bold;
+    text-align: center;
+}
+.filterContainer select {
+    border-radius: 30px;
+    background-color: #313131;
+    color: white;
+    width: 10vw;
+    height: 5vh;
+    border: none;
+    padding-left: 1vw;
+    font-weight: bold;
+}
+/* add guide button */
+#addGuideButtonContainer {
+    padding-top: 5vh;
+}
+#addGuideButton {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
+    border: none;
+    width: 10vw;
+    height: 5vh;
+    background-color: #6064ab;
+    color: white;
+    box-shadow:  5px 5px 21px #2e2e2e;
+    font-weight: bold;
+    transition: all .5s ease-out;
+}
+#addGuideButton:hover {
+    cursor:pointer;
+    box-shadow:  5px 5px 21px #6064ab;
+}
+/* #guides */
+#guides {
+    display: grid;
+    grid-template-columns: repeat(3, 1.5fr); /* 1fr = 25% */
+    grid-template-rows: repeat(5, 1fr);
+    column-gap: 3vw;
+    row-gap: 10vh;
+    padding-top: 10vh;
+}
+/* .guideContainer */
+.guideContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 30px;
+    color: white;
+}
+.iconContainer {
+    position: absolute;
+}
+.agentIcon {
+    position: relative;
+    bottom: 3vh;
+    right: 1vw;
+    width: 50%;
+    padding: 5%;
+    border-radius: 30px;
+    background-color: #90909d;
+    box-shadow: 5px 5px 15px #313131;
+
+}
+.guideImg {
+    width: 100%;
+    height: 30vh;
+    border-radius: 30px;
+    border: 3px solid white;
+}
+/* .guideTags */
+.guideTags {
+    width: 100%;
+}
+/* ul */
+.tagsList {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-inline-start: 0;
+}
+.tagsList li {
+    background-color: #0e204c;
+    border-radius: 30px;
+    padding: 5px;
+    width: 5vw;
+    text-align: center;
+    font-weight: bold;
+}
+/* Guide description */
+.guideDesc {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+.guideAuthor {
+    text-decoration: none;
+    color: #336cfa;
+    font-weight: bold;
+}
+/* Favorite icon */
+.favoriteContainer {
+    padding-left: 5px;
+}
+.favCount {
+    margin: 0;
+    padding-top: 5px;
+}

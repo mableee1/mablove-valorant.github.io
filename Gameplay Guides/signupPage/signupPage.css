@@ -1,0 +1,289 @@
+/* --columbia-blue: #c9f0ffff;
+--azure-x-11-web-color: #eafffdff;
+--cultured: #efeff0ff;
+--languid-lavender: #d5cad6ff;
+--old-lavender: #6b5e62ff;
+#1D2F6F
+#8390FA
+
+#0e1721
+#6fb7c4
+#fa4856
+#ebe6df
+ */
+/* Event classes */
+/* Hide element in the section*/
+#content .formContainer .hide {
+    display: none;
+}
+/* when Confirm password input !== New password input */
+#content .incorrectInput {
+    box-shadow:  0 0 7px 1px red;
+}
+/* HEADER */
+body {
+    margin: 0;
+    background-color: #0e1721;
+    font-family: 'Open Sans', sans-serif;
+    scroll-behavior: smooth;
+    background-image: url("img/jett.png");
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position-x: -100%;
+}
+#navContainer {
+    width: 100vw;
+    top: 0;
+    position: fixed;
+    background-color: #0e1721;
+    z-index: 1;
+}
+nav {
+    display: flex;
+    justify-content: flex-start;
+}
+nav a {
+    text-decoration: none;
+}
+nav li {
+    list-style-type: none;
+}
+nav li a {
+    text-transform: uppercase;
+    color: #ebe6df;
+}
+.menuContainer {
+    display: flex;
+    width: 50vw;
+    padding: 2vh 0 2vh 0;
+}
+.optionContainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: inherit;
+    font-weight: bold;
+}
+.optionContainer a:hover {
+    color: #6fb7c4;
+    transition: all .5s ease-out;
+}
+
+.valorantLogo {
+    width: 75px;
+    height: 50px;
+    margin-left: 5vw;
+}
+/* search bar */
+.searchContainer {
+    display: flex;
+    margin-left: auto;
+    padding: 2vh 2vw 2vh 0;
+    align-items: center;
+}
+.searchBar {
+    visibility: hidden;
+    background-color: transparent;
+    border: none;
+    border-bottom: .5px solid #ebe6df;
+    color: #ebe6df;
+    height: 5vh;
+    width: 15vw;
+    margin: 0;
+    padding: 0;
+    font-size: 0.7em;
+}
+.searchBar::placeholder {
+    color: #ebe6df;
+}
+.searchBar:focus {
+    background-color: #ebe6df;
+    color: #0e1721;
+    transition: all .5s ease-out;
+}
+.elementVisibility { /* JS: hide searchBar*/
+    visibility: visible;
+}
+.elementInvisibility {
+    display: none;
+}
+
+.searchBar::placeholder {
+    font-weight: lighter;
+}
+
+.searchButton {
+    margin-left: 10px;
+    background-color: transparent;
+    border: none;
+}
+#navContainer .searchButtonHover {
+    color: #6fb7c4;
+    transition: all .5s;
+}
+/*icon*/
+.gg-search {
+    color: #ebe6df;
+}
+.signinButton {
+    border-radius: 30px;
+    width: 8vw;
+    height: 5vh;
+    background-color: transparent;
+    border-color: #6fb7c4;
+    border-style: solid;
+    border-width: 2px;
+    margin-top: 0.8%;
+    margin-right: 5vw;
+    font-size: 1em;
+    transition: all .5s ease-out;
+}
+#navContainer .signinButton:hover {
+    background-color: #6fb7c4;
+}
+
+.signinLink {
+    color: #6fb7c4;
+    transition: all .5s ease-out;
+}
+
+#navContainer .signinButton:hover .signinLink {
+    color: #0e1721;
+}
+/*
+#agentList {
+    display: grid;
+    grid-template-columns: repeat(4, 250px);
+    grid-template-rows: repeat(4, 200px);
+    column-gap: 14vw;
+    row-gap: 20vh;
+    padding: 0 5vw 0 5vw;
+    /*box-shadow: 10px 10px 21px #d3d3d6,
+    -10px -10px 21px #fff;*/
+/*}*/ 
+
+
+
+/*  SECTION */
+#content {
+    margin: 30vh 0 30vh 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* form container */
+.formContainer {
+    width: 30vw;
+    background-color: #0e1721;
+    padding: 0px 70px 0px 70px;
+    background: linear-gradient(145deg, #0d151e, #0f1923);
+    box-shadow:  20px 20px 60px #0c141c,
+             -20px -20px 60px #101a26;
+    color: #ebe6df;
+    border-radius: 50px;
+}
+.formContainer h1 {
+    margin-top: 0px;
+    padding-top: 70px;
+    font-weight: bold;
+    font-size: 2em;
+}
+/* form */
+.form {
+    height: 70vh;
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+}
+/* inputs only container */
+.inputsContainer {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+/* e-mail and password inputs */
+.input {
+    width: 100%;
+    height: 7vh;
+    border-radius: 7px;
+    border: none;
+    color: #0e1721;
+    font-size: 1.3em;
+    padding-left: 1vw;
+}
+.input:valid {
+    box-shadow:  0 0 7px 1px greenyellow;
+}
+.input:invalid {
+    box-shadow:  0 0 7px 1px red;
+}
+.submitButton {
+    height: 7vh;
+    width: 50%;
+    background-color: #6fb7c4;
+    border: none;
+    border-radius: 15px;
+    color: #0e1721;
+    font-size: 1.3em;
+    transition: all .5s ease;
+}
+.submitButton:hover {
+    border: 1px solid #6fb7c4;
+    background-color: #0e1721;
+    color: #6fb7c4;
+}
+/* all .userOptions instances*/
+.userOptions {
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 70px;
+}
+.userOptions a {
+    text-decoration: none;
+    color: #ebe6df;
+    width: fit-content;
+    transition: all 1s ease;
+}
+.userOptions a:hover {
+    color: #6fb7c4;
+}
+/* forgot my password user links */
+.forgotPassForm .userOptions {
+    display: flex;
+    
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* FOOTER */
+#contacts {
+    color: #0e1721;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #6fb7c4;
+    padding: 5vh 0 5vh 0;
+}
+#contacts a {
+    text-decoration: none;
+    color: #0e1721;
+    font-weight: bold;
+}
+/* footer links */
+.footerTitle {
+    text-transform: uppercase;
+}
+#links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* footer icon */
+#links img {
+    width: 100px;
+    height: 100px;
+}

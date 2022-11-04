@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Font-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Pragati+Narrow&display=swap"
+    rel="stylesheet">
+    <!--Icons-->
+    <link href='https://css.gg/css' rel='stylesheet'>
+    <!--CSS file-->
+    <link rel="stylesheet" href="agentGuide.css">
+    <!--Page icon-->
+    <link type="image/png" sizes="16x16" rel="icon" href="https://img.icons8.com/plasticine/100/000000/valorant.png">
+    <title>Agent name</title>
+</head>
+<body>
+    <!--Navbar-->
+    <header class="navContainer">
+        <nav>
+            <div class="menuContainer">
+                <a title="Riot Games, Public domain, via Wikimedia Commons"
+                    href="https://commons.wikimedia.org/wiki/File:Valorant_logo_-_pink_color_version.svg"><img
+                        alt="Valorant logo - pink color version" class="valorantLogo"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Valorant_logo_-_pink_color_version.svg/512px-Valorant_logo_-_pink_color_version.svg.png"></a>
+                <div class="optionContainer">
+                    <li>
+                        <a href="">home</a>
+                    </li>
+                    <li>
+                        <a href="">agent guides</a>
+                    </li>
+                    <li>
+                        <a href="">contacts</a>
+                    </li>
+                </div>
+            </div>
+            <!--Search bar-->
+            <div class="searchContainer">
+                <input type="text" placeholder="Search by name, tag #, etc." class="searchBar">
+                <button class="searchButton">
+                    <i class="gg-search"></i>
+                </button>
+            </div>
+            <button class="signinButton">
+                <a href="" class="signinLink">Sign in</a>
+            </button>
+        </nav>
+    </header>
+    <section class="pageBackground">
+
+    </section>
+    <!--Content-->
+    <section id="content">
+        <!--Filter container-->
+        <div id="filters">
+            <div class="filterContainer">
+                <label for="map">map</label>
+                <select name="map" id="mapFilter">
+                    <option value="pearl">Pearl</option>
+                    <option value="fracture">Fracture</option>
+                    <option value="breeze">Breeze</option>
+                    <option value="icebox">Icebox</option>
+                    <option value="bind">Bind</option>
+                    <option value="haven">Haven</option>
+                    <option value="split">Split</option>
+                    <option value="ascent">Ascent</option>
+                </select>
+            </div>
+            <div class="filterContainer">
+                <label for="side">side</label>
+                <select name="side" id="sideFilter">
+                    <option value="attack">Attack</option>
+                    <option value="defense">Defense</option>
+                </select>
+            </div>
+            
+        </div>
+        <!--Add guide button container-->
+        <div id="addGuideButtonContainer">
+            <button onclick="window.location.href=''" id="addGuideButton">
+                Add guide
+            </button>
+        </div>
+        <!--Guides container: every guide is generated through js-->
+        <div id="guides">
+            <div class="guideContainer">
+                <!--Agent image-->
+                <div class="iconContainer">
+                    <img src="https://static.wikia.nocookie.net/valorant/images/3/35/Jett_icon.png" alt="" class="agentIcon">
+                </div>
+                <!--Guide image-->
+                <img src="https://twinfinite.net/wp-content/uploads/2022/07/game-overview-poster-launch.jpg" alt="" class="guideImg">
+                <!--Guide tags (related to the filters)-->
+                <div class="guideTags">
+                    <ul class="tagsList">
+                        <li>
+                            <!--Map title*-->
+                            Breeze
+                        </li>
+                        <li>
+                            <!--Side (attack or defense)-->
+                            Defense
+                        </li>
+                    </ul>
+                </div>
+                <!--Guide Description (title, author, date, favorite count)-->
+                <div class="guideDesc">
+                    <!--Guide title-->
+                    <h1 class="guideTitle">
+                        Breeze wall B
+                    </h1>
+                    <!--By {author} container-->
+                    <div class="authorContainer">
+                        By <a href="" class="guideAuthor">User</a>
+                    </div>
+                    <!--Date-->
+                    <p class="dateCreated">
+                        <!--DATE FORMAT: day Month year-->
+                        9 hours ago
+                    </p>
+                    <!--Favorite count-->
+                    <div class="favoriteContainer">
+                        <i class="gg-heart"></i>
+                        <p class="favCount">0</p> <!--add number of times favorited-->
+                    </div>
+                </div>
+            </div>
+            <div class="guideContainer">
+                <!--Agent image-->
+                <div class="iconContainer">
+                    <img src="https://static.wikia.nocookie.net/valorant/images/3/35/Jett_icon.png" alt="" class="agentIcon">
+                </div>
+                <!--Guide image-->
+                <img src="https://twinfinite.net/wp-content/uploads/2022/07/game-overview-poster-launch.jpg" alt="" class="guideImg">
+                <!--Guide tags (related to the filters)-->
+                <div class="guideTags">
+                    <ul class="tagsList">
+                        <li>
+                            <!--Map title*-->
+                            Breeze
+                        </li>
+                        <li>
+                            <!--Side (attack or defense)-->
+                            Defense
+                        </li>
+                    </ul>
+                </div>
+                <!--Guide Description (title, author, date, favorite count)-->
+                <div class="guideDesc">
+                    <!--Guide title-->
+                    <h1 class="guideTitle">
+                        Breeze wall B
+                    </h1>
+                    <!--By {author} container-->
+                    <div class="authorContainer">
+                        By <a href="" class="guideAuthor">User</a>
+                    </div>
+                    <!--Date-->
+                    <p class="dateCreated">
+                        <!--DATE FORMAT: day Month year-->
+                        9 hours ago
+                    </p>
+                    <!--Favorite count-->
+                    <div class="favoriteContainer">
+                        <i class="gg-heart"></i>
+                        <p class="favCount">0</p><!--add number of times favorited-->
+                    </div>
+                </div>
+            </div>
+            <div class="guideContainer">
+                <!--Agent image-->
+                <div class="iconContainer">
+                    <img src="https://static.wikia.nocookie.net/valorant/images/3/35/Jett_icon.png" alt="" class="agentIcon">
+                </div>
+                <!--Guide image-->
+                <img src="https://twinfinite.net/wp-content/uploads/2022/07/game-overview-poster-launch.jpg" alt="" class="guideImg">
+                <!--Guide tags (related to the filters)-->
+                <div class="guideTags">
+                    <ul class="tagsList">
+                        <li>
+                            <!--Map title*-->
+                            Breeze
+                        </li>
+                        <li>
+                            <!--Side (attack or defense)-->
+                            Defense
+                        </li>
+                    </ul>
+                </div>
+                <!--Guide Description (title, author, date, favorite count)-->
+                <div class="guideDesc">
+                    <!--Guide title-->
+                    <h1 class="guideTitle">
+                        Breeze wall B
+                    </h1>
+                    <!--By {author} container-->
+                    <div class="authorContainer">
+                        By <a href="" class="guideAuthor">User</a>
+                    </div>
+                    <!--Date-->
+                    <p class="dateCreated">
+                        <!--DATE FORMAT: day Month year-->
+                        9 hours ago
+                    </p>
+                    <!--Favorite count-->
+                    <div class="favoriteContainer">
+                        <i class="gg-heart"></i>
+                        <p class="favCount">0</p> <!--add number of times favorited-->
+                    </div>
+                </div>
+            </div>
+
+            <div class="guideContainer">
+<!--Agent image-->
+                <div class="iconContainer">
+                    <img src="https://static.wikia.nocookie.net/valorant/images/3/35/Jett_icon.png" alt="" class="agentIcon">
+                </div>
+                <!--Guide image-->
+                <img src="https://twinfinite.net/wp-content/uploads/2022/07/game-overview-poster-launch.jpg" alt="" class="guideImg">
+                <!--Guide tags (related to the filters)-->
+                <div class="guideTags">
+                    <ul class="tagsList">
+                        <li>
+                            <!--Map title*-->
+                            Breeze
+                        </li>
+                        <li>
+                            <!--Side (attack or defense)-->
+                            Defense
+                        </li>
+                    </ul>
+                </div>
+                <!--Guide Description (title, author, date, favorite count)-->
+                <div class="guideDesc">
+                    <!--Guide title-->
+                    <h1 class="guideTitle">
+                        Breeze wall B
+                    </h1>
+                    <!--By {author} container-->
+                    <div class="authorContainer">
+                        By <a href="" class="guideAuthor">User</a>
+                    </div>
+                    <!--Date-->
+                    <p class="dateCreated">
+                        <!--DATE FORMAT: day Month year-->
+                        9 hours ago
+                    </p>
+                    <!--Favorite count-->
+                    <div class="favoriteContainer">
+                        <i class="gg-heart"></i>
+                        <p class="favCount">0</p> <!--add number of times favorited-->
+                    </div>
+                </div>
+            </div>
+            <div class="guideContainer">
+<!--Agent image-->
+                <div class="iconContainer">
+                    <img src="https://static.wikia.nocookie.net/valorant/images/3/35/Jett_icon.png" alt="" class="agentIcon">
+                </div>
+                <!--Guide image-->
+                <img src="https://twinfinite.net/wp-content/uploads/2022/07/game-overview-poster-launch.jpg" alt="" class="guideImg">
+                <!--Guide tags (related to the filters)-->
+                <div class="guideTags">
+                    <ul class="tagsList">
+                        <li>
+                            <!--Map title*-->
+                            Breeze
+                        </li>
+                        <li>
+                            <!--Side (attack or defense)-->
+                            Defense
+                        </li>
+                    </ul>
+                </div>
+                <!--Guide Description (title, author, date, favorite count)-->
+                <div class="guideDesc">
+                    <!--Guide title-->
+                    <h1 class="guideTitle">
+                        Breeze wall B
+                    </h1>
+                    <!--By {author} container-->
+                    <div class="authorContainer">
+                        By <a href="" class="guideAuthor">User</a>
+                    </div>
+                    <!--Date-->
+                    <p class="dateCreated">
+                        <!--DATE FORMAT: day Month year-->
+                        9 hours ago
+                    </p>
+                    <!--Favorite count-->
+                    <div class="favoriteContainer">
+                        <i class="gg-heart"></i>
+                        <p class="favCount">0</p> <!--add number of times favorited-->
+                    </div>
+                </div>
+            </div>
+            <div class="guideContainer">
+<!--Agent image-->
+                <div class="iconContainer">
+                    <img src="https://static.wikia.nocookie.net/valorant/images/3/35/Jett_icon.png" alt="" class="agentIcon">
+                </div>
+                <!--Guide image-->
+                <img src="https://twinfinite.net/wp-content/uploads/2022/07/game-overview-poster-launch.jpg" alt="" class="guideImg">
+                <!--Guide tags (related to the filters)-->
+                <div class="guideTags">
+                    <ul class="tagsList">
+                        <li>
+                            <!--Map title*-->
+                            Breeze
+                        </li>
+                        <li>
+                            <!--Side (attack or defense)-->
+                            Defense
+                        </li>
+                    </ul>
+                </div>
+                <!--Guide Description (title, author, date, favorite count)-->
+                <div class="guideDesc">
+                    <!--Guide title-->
+                    <h1 class="guideTitle">
+                        Breeze wall B
+                    </h1>
+                    <!--By {author} container-->
+                    <div class="authorContainer">
+                        By <a href="" class="guideAuthor">User</a>
+                    </div>
+                    <!--Date-->
+                    <p class="dateCreated">
+                        <!--DATE FORMAT: day Month year-->
+                        9 hours ago
+                    </p>
+                    <!--Favorite count-->
+                    <div class="favoriteContainer">
+                        <i class="gg-heart"></i>
+                        <p class="favCount">0</p> <!--add number of times favorited-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Footer-->
+    <footer>
+
+    </footer>
+    <script src="agentGuide.js"></script>
+</body>
+</html>
