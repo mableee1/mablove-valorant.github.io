@@ -2,16 +2,30 @@ body {
     margin: 0;
     font-family: 'Open Sans', sans-serif;
     scroll-behavior: smooth;
-    background-color: #ffffff;
+    background: rgb(23,36,54);
+    background: linear-gradient(138deg, rgba(23,36,54,1) 0%, rgba(27,46,71,1) 54%, rgba(48,106,166,1) 85%, rgba(48,105,163,1) 100%);
+    font-size: 0.8em;
 }
 /* Navbar */
-#navContainer {
+.navContainer {
     width: 100vw;
     top: 0;
     position: fixed;
     background-color: transparent;
     z-index: 1;
     transition: all .5s ease-in;
+}
+.navScrolled {
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+.navScrolled nav .signinButton {
+    background-color: #ff4454;
+}
+.navScrolled nav .signinButton:hover {
+    background-color: transparent;
+    border: 3px solid #ff4454;
 }
 nav {
     display: flex;
@@ -24,8 +38,7 @@ nav li {
     list-style-type: none;
 }
 nav li a {
-    text-transform: uppercase;
-    color: #172c49;
+    color: white;
 }
 .menuContainer {
     display: flex;
@@ -37,7 +50,6 @@ nav li a {
     justify-content: space-evenly;
     align-items: center;
     width: inherit;
-    font-weight: bold;
 }
 .optionContainer a:hover {
     color: #ff4454;
@@ -102,7 +114,7 @@ nav li a {
     border-radius: 30px;
     width: 8vw;
     height: 5vh;
-    background-color: #ff4454;
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
     border: none;
     margin-top: 0.8%;
     margin-right: 5vw;
@@ -112,26 +124,46 @@ nav li a {
 .signinLink {
     color: white;
     transition: all .5s ease-out;
-    font-weight: bold;
 }
-
-
-
+.signinButton:hover {
+    background-color: transparent;
+    background-image: none;
+    border: 2px solid #8BC6EC;
+}
+.signinButton:hover .signinLink {
+    color: #8BC6EC;
+}
+ 
 /* SECTION */
 #content {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    padding-top: 15vh;
+    justify-content: space-evenly;
     height: 100vh;
 }
+/* form title */
+#formTitle {
+    color:rgba(255, 255, 255);
+    position: relative;
+    left: 15vw; /* alined with #form-wrapper width: 70vw (100vw - 70vw)/2 = 15vw */
+}
+#formTitle h1 {
+    font-size: 2em;
+}
+
 /* form container */
 #form-wrapper {
     margin: auto;
-    background-color: #406196;
+    background-color: rgba(255, 255, 255, 0.23);
     width: 70vw;
     height: 70vh;
-    border-radius: 30px;
-    box-shadow:  20px 20px 60px #bebebe,
-             -20px -20px 60px #ffffff;
+    border-radius: 17px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    border: none;
+    color: white;
 }
 /* guide form */
 #guideForm {
@@ -139,35 +171,137 @@ nav li a {
     justify-content: space-evenly;
     height: 100%;
 }
-/* left side of the form */
-#leftForm {
+#leftForm, #rightForm {
     display: flex;
     flex-direction: column;
+}
+/* left side of the form */
+#leftForm {
     align-items: flex-start;
     width: 50%;
     padding: 5vh;
 }
-#leftForm input {
+#leftForm label {
+    margin-bottom: 5px;
+}
+#leftForm select {
     border-radius: 7px;
+    height: 7vh;
+    background-color: transparent;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    color: white;
     border: none;
 }
-#leftForm textarea {
-    border-radius: 7px;
+#leftForm option {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+}
+#leftForm select, #guideTitle, #guideDesc {
+    margin-bottom: 3vh;
+    width: 100%;
+}
+#guideTitle, #guideDesc {
+    background-color: transparent;
     border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    padding: 0;
+}
+#guideDesc {
+    height: 20vh;
+    resize: none;
+}
+#guideTitle, #submitButton {
+    height: 7vh;
 }
 #submitButton {
-    width: 10vw;
-    height: 5vh;
-    border-radius: 35px;
-    background-color: #172c49;
+    margin-top: 3vh;
+    width: 100%;
+    border-radius: 7px;
+    border: none;
+    color: white;
+    background-color: #8BC6EC;
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+#submitButton:hover {
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid #8BC6EC;
+    color: #8BC6EC;
 }
 /* right side of the form */
 #rightForm {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: #ffffff;
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+    justify-content: space-between;
+    align-items: center;
     width: 50%;
-    border-radius: 30px;
+    padding: 5vh 5vh 5vh 5vh;
+    border-radius: 17px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    border: none;
 }
-
+#rightForm input:nth-child(1) {
+    margin-bottom: 3vh;
+}
+#rightForm label {
+    margin-bottom: 5px;
+}
+/* video upload */
+#videoInput, #imgInput {
+    background-color: transparent;
+    border-radius: 5px;
+}
+#vidWrap {
+    width: 30vw;
+    height: 35vh;
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+    box-shadow: inset 20px 20px 60px #7b90c3,
+            inset -20px -20px 60px #a7c2ff;
+    color: #eeeeee;
+}
+#vidInputTitle {
+    margin-top: 3vh;
+}
+/* video and image wraps */
+#vidWrap, #imgWrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 17px;
+}
+#vidWrap p, #imgWrap p {
+    position: absolute;
+}
+/* video and image preview */
+#vidPreview, #imgPreview {
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    border-radius: 17px;
+    background: linear-gradient(145deg, #474747, #141414);
+    box-shadow:  1px 1px 10px #333333,
+             -1px -1px 10px #424242;
+}
+/* image upload */
+#imgWrap {
+    height: 17vh;
+    width: 50%;
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+    box-shadow: inset 20px 20px 60px #7b90c3,
+            inset -20px -20px 60px #a7c2ff;
+    color: #eeeeee;
+}
+/* image preview */
+#imgPreview {
+    background-color: transparent;
+}
+/* inputs Container */
+#uploadInputsWrap {
+    display: flex;
+}

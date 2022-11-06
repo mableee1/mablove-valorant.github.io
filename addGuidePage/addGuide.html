@@ -19,7 +19,7 @@
 </head>
 <body>
     <!--HEADER-->
-    <header id="navContainer">
+    <header class="navContainer">
         <nav>
             <div class="menuContainer">
                 <a title="Riot Games, Public domain, via Wikimedia Commons"
@@ -53,6 +53,14 @@
 
     <!--SECTION-->
     <section id="content">
+        <div id="formTitle">
+            <h1>
+                Share your game knowledge with other players
+            </h1>
+            <p>
+                Your guide will published after a moderator's approval. Make sure your guide is unique and has not been published here before.
+            </p>
+        </div>
         <!--
             agent
             map
@@ -65,51 +73,97 @@
         <div id="form-wrapper">
             <form action="" id="guideForm">
                 <div id="leftForm">
-                    <label for="">
-                        Agent
-                    </label>
-                    <select name="" id="">
-
-                    </select>
-    
-                    <label for="" required>
-                        Map
-                    </label>
-                    <select name="" id="">
-
-                    </select>
-    
-                    <label for="" required>
-                        Side
-                    </label>
-                    <select name="" id="">
-                        
-                    </select>
-    
-                    <label for="" required>
+                    <label for="title" required>
                         Title
                     </label>
-                    <input type="text">
+                    <input type="text" name="title" id="guideTitle" spellcheck="true">
+                    <label for="agent">
+                        Agent
+                    </label>
+                    <select name="agent" id="agentSelect">
+                        <option value="astra">Astra</option>
+                        <option value="breach">Breach</option>
+                        <option value="brim">Brimstone</option>
+                        <option value="chamber">Chamber</option>
+                        <option value="cypher">Cypher</option>
+                        <option value="fade">Fade</option>
+                        <option value="jett">Jett</option>
+                        <option value="kayo">KAY/O</option>
+                        <option value="kj">Killjoy</option>
+                        <option value="neon">Neon</option>
+                        <option value="omen">Omen</option>
+                        <option value="phoenix">Phoenix</option>
+                        <option value="raze">Raze</option>
+                        <option value="reyna">Reyna</option>
+                        <option value="sage">Sage</option>
+                        <option value="skye">Skye</option>
+                        <option value="sova">Sova</option>
+                        <option value="viper">Viper</option>
+                        <option value="yoru">Yoru</option>
+                    </select>
     
-                    <label for="">
+                    <label for="map" required>
+                        Map
+                    </label>
+                    <select name="map" id="mapSelect">
+                        <option value="pearl">Pearl</option>
+                        <option value="fracture">Fracture</option>
+                        <option value="breeze">Breeze</option>
+                        <option value="icebox">Icebox</option>
+                        <option value="bind">Bind</option>
+                        <option value="haven">Haven</option>
+                        <option value="split">Split</option>
+                        <option value="ascent">Ascent</option>
+                    </select>
+    
+                    <label for="side" required>
+                        Side
+                    </label>
+                    <select name="side" id="sideSelect">
+                        <option value="attack">Attack</option>
+                        <option value="defense">Defense</option>
+                    </select>
+      
+                    <label for="text">
                         Description
                     </label>
-                    <textarea name="" id="" cols="30" rows="10">
+                    <textarea name="" id="guideDesc" cols="30" rows="5" name="text" spellcheck="true">
     
                     </textarea>
                     <!--Submit button-->
-                    <input type="submit" value="Submit your guide" id="submitButton">
+                    <input type="submit" value="Submit my guide" id="submitButton">
                 </div>
                 <div id="rightForm">
-                    <label for="" required>
-                        Upload your video
-                    </label>
-                    <input type="file">
+                    <div id="vidWrap">
+                        <p>
+                            Upload your video
+                        </p>
+                        <video id="vidPreview" loop muted controls hidden>
+                            <source src="Valorant_ All Jett abilities.mp4" type="video/mp4">
+                        </video>
+                    </div>
     
-                    <label for="">
-                        Upload your screenshots
-                    </label>
-                    <input type="image">
+                    <div id="imgWrap"> <!--grid for multiple images JS-->
+                        <!---->
+                        <img id="imgPreview" src="https://wallpaperforu.com/wp-content/uploads/2021/09/Wallpaper-Valorant-Jett-Valorant-1920x1080px-1080p-Fr16.jpg" hidden>
+                        <p>
+                            Upload your screenshots
+                        </p>
+                    </div>
+                    <div id="uploadInputsWrap">
+                        <div class="inputWrap">
+                            <label for="" id="vidInputTitle">
+                                Upload your video
+                            </label>
+                            <input id="videoInput" type="file" accept="video/mp4, video/mov, video/wmv, video/avi" size="52428800" required>
+                        </div>
+                        <div class="inputWrap">
+                            <label for="">
+                                Upload your screenshots
+                            </label>
+                            <input id="imgInput" type="file" accept="image/*" multiple size="10485760">
+                        </div>
+                    </div>
                 </div>
             </form>
         </div>
