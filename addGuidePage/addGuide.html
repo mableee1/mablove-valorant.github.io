@@ -38,13 +38,6 @@
                     </li>
                 </div>
             </div>
-            <!--Search bar-->
-            <div class="searchContainer">
-                <input type="text" placeholder="Search by name, tag #, etc." class="searchBar">
-                <button class="searchButton">
-                    <i class="gg-search"></i>
-                </button>
-            </div>
             <button class="signinButton">
                 <a href="" class="signinLink">Sign in</a>
             </button>
@@ -73,10 +66,10 @@
         <div id="form-wrapper">
             <form action="" id="guideForm">
                 <div id="leftForm">
-                    <label for="title" required>
+                    <label for="title">
                         Title
                     </label>
-                    <input type="text" name="title" id="guideTitle" spellcheck="true">
+                    <input type="text" name="title" minlength="9" maxlength="100" id="guideTitle" spellcheck="true" required>
                     <label for="agent">
                         Agent
                     </label>
@@ -102,7 +95,7 @@
                         <option value="yoru">Yoru</option>
                     </select>
     
-                    <label for="map" required>
+                    <label for="map">
                         Map
                     </label>
                     <select name="map" id="mapSelect">
@@ -116,7 +109,7 @@
                         <option value="ascent">Ascent</option>
                     </select>
     
-                    <label for="side" required>
+                    <label for="side">
                         Side
                     </label>
                     <select name="side" id="sideSelect">
@@ -124,10 +117,10 @@
                         <option value="defense">Defense</option>
                     </select>
       
-                    <label for="text">
+                    <label for="desc">
                         Description
                     </label>
-                    <textarea name="" id="guideDesc" cols="30" rows="5" name="text" spellcheck="true">
+                    <textarea name="desc" id="guideDesc" form="guideForm" cols="30" rows="5" name="text" minlength="9" maxlength="100" spellcheck="true">
     
                     </textarea>
                     <!--Submit button-->
@@ -139,13 +132,13 @@
                             Upload your video
                         </p>
                         <video id="vidPreview" loop muted controls hidden>
-                            <source src="Valorant_ All Jett abilities.mp4" type="video/mp4">
+                            <source src="" type="video/mp4">
                         </video>
                     </div>
     
                     <div id="imgWrap"> <!--grid for multiple images JS-->
                         <!---->
-                        <img id="imgPreview" src="https://wallpaperforu.com/wp-content/uploads/2021/09/Wallpaper-Valorant-Jett-Valorant-1920x1080px-1080p-Fr16.jpg" hidden>
+                        <img id="imgPreview" src="" hidden>
                         <p>
                             Upload your screenshots
                         </p>
