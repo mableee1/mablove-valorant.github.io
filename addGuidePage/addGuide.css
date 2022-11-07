@@ -5,6 +5,7 @@ body {
     background: rgb(23,36,54);
     background: linear-gradient(138deg, rgba(23,36,54,1) 0%, rgba(27,46,71,1) 54%, rgba(48,106,166,1) 85%, rgba(48,105,163,1) 100%);
     font-size: 0.8em;
+    overflow-x: hidden;
 }
 /* Navbar */
 .navContainer {
