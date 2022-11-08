@@ -11,26 +11,29 @@ window.addEventListener("scroll", () => {
     }
 });
 
+
+
 // Preview uploaded video, screenshot
 let videoInput = document.querySelector("#videoInput");
 let imgInput = document.querySelector("#imgInput");
-let videoTag = document.querySelector("#vidPreview");
-let vidPreview = document.querySelector("#vidPreview source");
+let vidPreview = document.querySelector("#vidPreview");
 let imgPreview = document.querySelector("#imgPreview");
-let vidFile = videoInput.getAttribute('value');
-let imgFile = imgInput.getAttribute('value');
-
-if (vidFile) {
-    console.log(vidFile);
-    vidPreview.setAttribute('src', vidFile);
-    videoTag.removeAttribute('hidden');
-} else {
-    videoTag.setAttribute('hidden', '');
+function getURL(input, previewContainer, previewTag) {
+    var reader = new FileReader();
+    reader.onload = function(e) {
+        previewContainer.setAttribute('src',e.target.result);
+    }
+    if (input.files[0]) {
+        reader.readAsDataURL(input.files[0]);
+    }
+    previewTag.removeAttribute('hidden');
 }
-if (imgFile) {
-    console.log(imgFile);
-    imgPreview.setAttribute('src', imgFile);
-    imgPreview.removeAttribute('hidden');
-} else {
-    imgPreview.setAttribute('hidden', '');
-}
+imgInput.addEventListener('change', () => {
+    getURL(imgInput, imgPreview, imgPreview);
+});
+videoInput.addEventListener("change", (e) => {
+    let file = e.target.files[0];
+    let blob = URL.createObjectURL(file);
+    vidPreview.setAttribute('src', blob);  
+    vidPreview.removeAttribute('hidden');
+});

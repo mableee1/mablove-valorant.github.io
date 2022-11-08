@@ -131,8 +131,8 @@
                         <p>
                             Upload your video
                         </p>
-                        <video id="vidPreview" loop muted controls hidden>
-                            <source src="" type="video/mp4">
+                        <video id="vidPreview" autplay loop controls hidden>
+                            <source id="vidSource" src="" type="video/mp4">
                         </video>
                     </div>
     
@@ -167,6 +167,7 @@
 
     </footer>
 
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
     <script src="addGuide.js"></script>
 </body>
 </html>

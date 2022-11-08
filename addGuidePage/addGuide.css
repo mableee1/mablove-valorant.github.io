@@ -2,8 +2,11 @@ body {
     margin: 0;
     font-family: 'Open Sans', sans-serif;
     scroll-behavior: smooth;
-    background: rgb(23,36,54);
-    background: linear-gradient(138deg, rgba(23,36,54,1) 0%, rgba(27,46,71,1) 54%, rgba(48,106,166,1) 85%, rgba(48,105,163,1) 100%);
+    /*background: linear-gradient(138deg, rgba(23,36,54,1) 0%, rgba(27,46,71,1) 54%, rgba(48,106,166,1) 85%, rgba(48,105,163,1) 100%);*/
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('addGuideImages/1264062.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     font-size: 0.8em;
     overflow-x: hidden;
 }
@@ -237,12 +240,15 @@ nav li a {
 /* video and image preview */
 #vidPreview, #imgPreview {
     z-index: 1000;
-    width: 100%;
     height: 100%;
     border-radius: 17px;
     background: linear-gradient(145deg, #474747, #141414);
     box-shadow:  1px 1px 10px #333333,
              -1px -1px 10px #424242;
+}
+/* video Preview */
+#vidPreview {
+    width: fit-content;
 }
 /* image upload */
 #imgWrap {
@@ -255,6 +261,7 @@ nav li a {
 }
 /* image preview */
 #imgPreview {
+    width: 100%;
     background-color: transparent;
 }
 /* inputs Container */
