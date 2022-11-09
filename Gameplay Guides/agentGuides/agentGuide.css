@@ -2,8 +2,8 @@ body {
     margin: 0;
     font-family: 'Open Sans', sans-serif;
     scroll-behavior: smooth;
-    background-color: rgb(123,57,74);
-    background: linear-gradient(90deg, rgba(123,57,74,1) 0%, rgba(85,83,111,1) 50%, rgba(68,98,134,1) 100%);
+    /*background: linear-gradient(90deg, rgba(123,57,74,1) 0%, rgba(85,83,111,1) 50%, rgba(68,98,134,1) 100%);*/
+    background: linear-gradient(138deg, rgba(23,36,54,1) 0%, rgba(27,46,71,1) 54%, rgba(48,106,166,1) 85%, rgba(48,105,163,1) 100%);
 }
 /* Navbar */
 .navContainer {
@@ -16,7 +16,7 @@ body {
 }
 /* On scroll, change the background color of #navContainer */
 .scrolledNav {
-    background-color: #6064ab;
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
 }
@@ -32,7 +32,6 @@ nav li {
     list-style-type: none;
 }
 nav li a {
-    text-transform: uppercase;
     color: #ffffff;
 }
 .menuContainer {
@@ -45,7 +44,6 @@ nav li a {
     justify-content: space-evenly;
     align-items: center;
     width: inherit;
-    font-weight: bold;
 }
 .optionContainer a:hover {
     color: #ff4454;
@@ -66,16 +64,23 @@ nav li a {
     border-radius: 30px;
     width: 8vw;
     height: 5vh;
-    background-color: #ff4454;
+    background-color: #8BC6EC;
     border: none;
     margin-right: 5vw;
     font-size: 0.8em;
     transition: all .5s ease-out;
 }
+.signinButton:hover {
+    background-color: #ff4454;
+    cursor: pointer;
+}
 .signinLink {
     color: white;
     transition: all .5s ease-out;
-    font-weight: bold;
+}
+.scrolledNav .signinButton:hover {
+    background-color: #ff4454;
+    cursor: pointer;
 }
 
 
@@ -90,7 +95,6 @@ nav li a {
     background-position: 0 21%;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
-    box-shadow:  5px 5px 21px #2e2e2e;
 }
 
 
@@ -123,7 +127,7 @@ nav li a {
 }
 .filterContainer select {
     border-radius: 30px;
-    background-color: #313131;
+    background-color: transparent;
     color: white;
     width: 10vw;
     height: 5vh;
@@ -143,10 +147,9 @@ nav li a {
     border: none;
     width: 10vw;
     height: 5vh;
-    background-color: #6064ab;
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
     color: white;
     box-shadow:  5px 5px 21px #2e2e2e;
-    font-weight: bold;
     transition: all .5s ease-out;
 }
 #addGuideButton:hover {
@@ -229,4 +232,38 @@ nav li a {
 .favCount {
     margin: 0;
     padding-top: 5px;
+}
+
+/* FOOTER */
+#contacts {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+    padding: 5vh 0 5vh 0;
+}
+#contacts a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: all .5s ease-in-out;
+}
+#contacts a:hover {
+    color: #ff4454;
+}
+/* footer links */
+.footerTitle {
+    text-transform: uppercase;
+}
+#links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* footer icon */
+#links img {
+    width: 100px;
+    height: 100px;
 }

@@ -31,6 +31,7 @@ function getURL(input, previewContainer, previewTag) {
 imgInput.addEventListener('change', () => {
     getURL(imgInput, imgPreview, imgPreview);
 });
+/* cannot use a FileReader method for videos, it works with other files */
 videoInput.addEventListener("change", (e) => {
     let file = e.target.files[0];
     let blob = URL.createObjectURL(file);
