@@ -1,7 +1,10 @@
 body {
-    margin: 0px;
-    font-weight: lighter;
+    margin: 0;
     font-family: 'Open Sans', sans-serif;
+    scroll-behavior: smooth;
+    font-size: 0.8em;
+    overflow-x: hidden;
+    background-color: #efeff0ff;
 }
 .navbarList, #agentRoles h1, .agentNames, .agentTitle, abilityCard h1 {
     font-family: 'Pragati Narrow', sans-serif;
@@ -30,20 +33,11 @@ body {
     top: 20%;
     left: 3%;
     list-style-type: none;
-    font-size: 1.4rem;
 }
 .navbarList a {
     color: white;
     text-decoration: none;
 }
-#search {
-    position: absolute;
-    top: 10%;
-    right: 5%;
-    border: none;
-    background-color: transparent;
-}
-
 
 /*agentRoles*/
 #agentRoles {
@@ -55,18 +49,6 @@ body {
 }
 .slides {
     display: none;
-}
-.slides:nth-child(1) {
-    background-image: url(images/backgrounds/duelists.png);
-}
-.slides:nth-child(2) {
-    background-image: url(images/backgrounds/controllers.png);
-}
-.slides:nth-child(3) {
-    background-image: url(images/backgrounds/initiators.png);
-}
-.slides:nth-child(4) {
-    background-image: url(images/backgrounds/sentinels.png);
 }
 .slides:nth-child(even) .roleContent {
     align-items: flex-end;
@@ -137,7 +119,6 @@ body {
     justify-content: space-between;
     text-align: left;
     text-transform: uppercase;
-    font-size: 1.4rem;
 }
 .agentNames a {
     text-decoration: none;
@@ -198,26 +179,18 @@ body {
 }
 .agentTitle {
     margin: 0;
-    font-size: 6rem;
     text-transform: uppercase;
 }
 .agentInfo p {
     line-height: 2;
-    font-size: 1.4rem;
 }
 .agentInfo, .abilityCard {
     display: flex;
     flex-direction: column;
 }
-.agentRole {
-    font-size: 1.4rem;
-}
 .agentRole img {
     height: 19px;
     width: 19px;
-}
-.country {
-    font-size: 1.4rem;
 }
 .country img {
     width: 34px;
@@ -229,7 +202,6 @@ body {
 }
 .abilities button {
     color: white;
-    font-size: 1.4rem;
     border: none;
     text-transform: uppercase;
 }
@@ -249,16 +221,11 @@ body {
     left: -4%;
     margin: 0;
     text-transform: uppercase;
-    font-size: 3.5rem;
     font-weight: bold;
-}
-.abilityCard strong {
-    font-size: 1.4rem;
 }
 .abilityCard p {
     max-height: 100%;
     line-height: 2;
-    font-size: 1vw; /*1vw - 1% of the containing block size, responsive*/
 }
 .abilityCard img {
     width: 42px;
@@ -459,47 +426,36 @@ figure {
 }
 /*contacts*/
 #contacts {
-    height: 40vh;
-    background-color: #0D1B23;
+    color: white;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    font-size: 1.2rem;
-    color: white;
+    justify-content: space-evenly;
+    align-items: center;
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+    padding: 5vh 0 5vh 0;
 }
 #contacts a {
     text-decoration: none;
     color: white;
-}
-#contacts img {
-    width: 170px;
-    height: 116px
-}
-.footerTitle, #links  {
-    text-align: center;
-}
-
-.footerTitle {
-    margin-top: 4rem;
     font-weight: bold;
+    transition: all .5s ease-in-out;
+}
+#contacts a:hover {
+    color: #ff4454;
+}
+/* footer links */
+.footerTitle {
+    text-transform: uppercase;
 }
 #links {
-    margin-top: 4rem;
-}
-#roles > div {
-    text-align: center;
-    height: 60%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    align-items: center;
 }
-#agents > div {
-    padding: 0 40px 0 0;
-    text-align: center;
-    height: 60%;
-    display:inline-flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+/* footer icon */
+#links img {
+    width: 100px;
+    height: 100px;
 }
 
 /*Media*/

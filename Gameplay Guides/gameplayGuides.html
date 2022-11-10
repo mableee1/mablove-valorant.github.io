@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <header id="navContainer">
+    <header class="navContainer">
         <nav>
             <!--горизонтальный-->
             <div class="menuContainer">
@@ -26,26 +26,19 @@
                         src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Valorant_logo_-_pink_color_version.svg/512px-Valorant_logo_-_pink_color_version.svg.png"></a>
                 <div class="optionContainer">
                     <li>
-                        <a href="">home</a>
+                        <a href="../main.html">home</a>
                     </li>
                     <!--ссылка на главную страницу-->
                     <li>
-                        <a href="#agentGuides">agent guides</a>
+                        <a href="#agents">agent guides</a>
                     </li>
                     <li>
-                        <a href="#gameplayGuidesContacts">contacts</a>
+                        <a href="#contacts">contacts</a>
                     </li>
                 </div>
             </div>
-            <!--search bar справа-->
-            <div class="searchContainer">
-                <input type="text" placeholder="Search by name, tag #, etc." class="searchBar">
-                <button class="searchButton">
-                    <i class="gg-search"></i>
-                </button>
-            </div>
-            <button class="signupButton">
-                <a href="signupPage/signupPage.html" class="signupLink">Sign in</a>
+            <button class="signinButton">
+                <a href="signupPage/signupPage.html" class="signinLink">Sign in</a>
             </button>
         </nav>
     </header>
@@ -64,7 +57,7 @@
             <!--сделать функцию для генерации ссылок и имен агентов при загрузке страницы-->
             <div id="filters">
                 <div>
-                    <label for="agentSelect" id="agentSelectLabel">Agent</label>
+                    <label for="agentSelect" id="agentSelectLabel">agent</label>
                     <select name="agentSelect" id="agentSelect">
                         <option value="allAgents">All agents</option>
                         <option value="astra">Astra</option>
@@ -90,7 +83,7 @@
                 </div>
 
                 <div>
-                    <label for="roleSelect" id="roleSelectLabel">Role</label>
+                    <label for="roleSelect" id="roleSelectLabel">role</label>
                     <select name="roleSelect" id="roleSelect">
                         <option value="allRoles">All roles</option>
                         <option value="duelist">Duelists</option>
@@ -101,7 +94,7 @@
                 </div>
             </div>
             <div class="addGuideButtonContainer">
-                <button onclick="window.location.href=''" class="addGuideButton">
+                <button onclick="window.location.href='../addGuidePage/addGuide.html'" class="addGuideButton">
                     Add guide
                 </button>
             </div>
@@ -117,7 +110,7 @@
                             <img src="" alt="">
                         </div>
                         <button onclick="window.location.href=''" class="guideButton">
-                            See guides
+                            see guides
                         </button>
                     </div>
                     <div class="agentLi kayo initiator">
@@ -129,7 +122,7 @@
                             <a href="">Initiator</a>
                         </div>
                         <button onclick="window.location.href=''" class="guideButton">
-                            See guides
+                            see guides
                         </button>
                     </div>
                     <div class="agentLi sova initiator">
@@ -141,7 +134,7 @@
                             <a href="">Initiator</a>
                         </div>
                         <button onclick="window.location.href=''" class="guideButton">
-                            See guides
+                            see guides
                         </button>
                     </div>
                     <div class="agentLi raze duelist">
@@ -153,7 +146,7 @@
                             <a href="">Duelist</a>
                         </div>
                         <button onclick="window.location.href=''" class="guideButton">
-                            See guides
+                            see guides
                         </button>
                     </div>
                     <div class="agentLi neon duelist">
@@ -165,7 +158,7 @@
                             <a href="">Duelist</a>
                         </div>
                         <button onclick="window.location.href=''" class="guideButton">
-                            See guides
+                            see guides
                         </button>
                     </div>
             
@@ -178,7 +171,7 @@
                             <a href="">Sentinel</a>
                         </div>
                         <button onclick="window.location.href=''" class="guideButton">
-                            See guides
+                            see guides
                         </button>
                     </div>
                     <div class="agentLi jett duelist">
@@ -190,7 +183,7 @@
                             <a href="">Duelist</a>
                         </div>
                         <button onclick="window.location.href=''" class="guideButton">
-                            See guides
+                            see guides
                         </button>
                     </div>
                     <div class="agentLi skye initiator">
@@ -202,7 +195,7 @@
                             <a href="">Initiator</a>
                         </div>
                         <button onclick="window.location.href=''" class="guideButton">
-                            See guides
+                            see guides
                         </button>
                     </div>
                     <div class="agentLi phoenix duelist">
@@ -214,7 +207,7 @@
                             <a href="">Duelist</a>
                         </div>
                         <button onclick="window.location.href=''" class="guideButton">
-                            See guides
+                            see guides
                         </button>
                     </div>
                     <div class="agentLi fade initiator">
@@ -226,7 +219,7 @@
                             <a href="">Initiator</a>
                         </div>
                         <button onclick="window.location.href=''" class="guideButton">
-                            See guides
+                            see guides
                         </button>
                     </div>
                 
@@ -239,7 +232,7 @@
                             <a href="">Initiator</a>
                         </div>
                         <button onclick="window.location.href=''" class="guideButton">
-                            See guides
+                            see guides
                         </button>
                     </div>
                     <div class="agentLi yoru duelist">
@@ -251,7 +244,7 @@
                             <a href="">Duelist</a>
                         </div>
                         <button onclick="window.location.href=''" class="guideButton">
-                            See guides
+                            see guides
                         </button>
                     </div>
                     <div class="agentLi reyna duelist">
@@ -263,7 +256,7 @@
                             <a href="">Dueslist</a>
                         </div>
                         <button onclick="window.location.href=''" class="guideButton">
-                            See guides
+                            see guides
                         </button>
                     </div>
                     <div class="agentLi kj sentinel">
@@ -275,7 +268,7 @@
                             <a href="">Sentinel</a>
                         </div>
                         <button onclick="window.location.href=''" class="guideButton">
-                            See guides
+                            see guides
                         </button>
                     </div>
                     <div class="agentLi chamber sentinel">
@@ -287,7 +280,7 @@
                             <a href="">Sentinel</a>
                         </div>
                         <button onclick="window.location.href=''" class="guideButton">
-                            See guides
+                            see guides
                         </button>
                     </div>
                     <div class="agentLi astra controller">
@@ -299,7 +292,7 @@
                             <a href="">Controller</a>
                         </div>
                         <button onclick="window.location.href=''" class="guideButton">
-                            See guides
+                            see guides
                         </button>
                     </div>
                     <div class="agentLi viper controller">
@@ -311,7 +304,7 @@
                             <a href="">Controller</a>
                         </div>
                         <button onclick="window.location.href=''" class="guideButton">
-                            See guides
+                            see guides
                         </button>
                     </div>
                     <div class="agentLi sage sentinel">
@@ -323,7 +316,7 @@
                             <a href="">Sentinel</a>
                         </div>
                         <button onclick="window.location.href=''" class="guideButton">
-                            See guides
+                            see guides
                         </button>
                     </div>
                     <div class="agentLi omen controller">
@@ -335,27 +328,27 @@
                             <a href="">Conroller</a>
                         </div>
                         <button onclick="window.location.href=''" class="guideButton">
-                            See guides
+                            see guides
                         </button>
                     </div>
             </div>
         </section>
     </section>
 
-    <footer id="gameplayGuidesContacts">
-        <a href="" class="footerTitle">Home</a>
+    <footer id="contacts">
+        <a href="../main.html" class="footerTitle">Home</a>
 
-        <a href="#agentGuides" class="footerTitle">Agent guides</a>
+        <a href="#agents" class="footerTitle">Agent guides</a>
 
-        <a href="#gameplayGuidesContacts" class="footerTitle">Contacts</a>
+        <a href="#contacts" class="footerTitle">Contacts</a>
 
         <div id="links">
             <img src="https://img.icons8.com/plasticine/100/000000/valorant.png" alt="">
             <p>The interface and design developed by
-                Natalia Kim (natasha_kim5@yahoo.com)
+                Natalia Kim
             </p>
             <p>Github:
-                <a href="https://github.com/mableee1?tab=repositories">https://github.com/mableee1?tab=repositories</a>
+                <a href="https://github.com/mableee1">https://github.com/mableee1</a>
             </p>
             <p>Credit:
                 <a href="https://www.riotgames.com/">Riot Games, Inc.</a>
