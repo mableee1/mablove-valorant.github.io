@@ -89,12 +89,6 @@ nav li a {
     height: 50px;
     margin-left: 5vw;
 }
-.elementVisibility { /* JS: hide searchBar*/
-    visibility: visible;
-}
-.elementInvisibility {
-    display: none;
-}
 .signinButton {
     border-radius: 30px;
     width: 8vw;

@@ -1,0 +1,492 @@
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    scroll-behavior: smooth;
+    font-size: 0.8em;
+    overflow-x: hidden;
+    background-color: #efeff0ff;
+}
+.navbarList, #agentRoles h1, .agentNames, .agentTitle, abilityCard h1 {
+    font-family: 'Pragati Narrow', sans-serif;
+}
+
+/*home*/
+#backgroundVideo {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+}
+#home {
+    height: 100vh;
+}
+.homeNavbar {
+    height: 50%;
+}
+
+.navbarList {
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 20%;
+    left: 3%;
+    list-style-type: none;
+}
+.navbarList a {
+    color: white;
+    text-decoration: none;
+}
+
+/*agentRoles*/
+#agentRoles {
+    height: 100vh;
+}
+#agentRoles button {
+    border: none;
+    background-color: transparent;
+}
+.slides {
+    display: none;
+}
+.slides:nth-child(even) .roleContent {
+    align-items: flex-end;
+    margin-right: 3%;
+}
+.slides:nth-child(even) .roleDesc {
+    text-align: end;
+}
+.slides img {
+    height: 72px;
+    width: 72px;
+}
+.slideActive {
+    display: block;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#previousSlide, #nextSlide {
+    position: relative;
+    bottom: 10%;
+    left: 45.6%;
+}
+#previousSlide {
+    transform: rotate(90deg);
+}
+#nextSlide {
+    transform: rotate(90deg) scaleY(-1); /*flip vertically*/
+}
+#previousSlide img, #nextSlide img{
+    width: 70px;
+    height: 70px;
+}
+#previousSlide img {
+    filter: brightness(0.1);
+}
+.roleContent {
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items:flex-start;
+    margin-left: 3%;
+}
+#agentRoles h1 {
+    text-transform: uppercase;
+    display: inline;
+    font-size: 5rem;
+}
+.roleDesc {
+    width: 45%;
+    line-height: 40px;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+#agentRoles h1, .roleDesc {
+    color: #0D1B23;
+}
+.readMore {
+    color: white;
+    font-size: 1.4rem;
+}
+.agentNames {
+    width: 30%; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    text-transform: uppercase;
+}
+.agentNames a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/*agents*/
+/* Применяется к #agentRoles, когда кликнули на имя агента
+    position: fixed;
+    overflow-y: scroll;*/
+.stopScrolling {
+    height: 100vh;
+    overflow: hidden;
+}
+.overlayAgentCard {
+    height: 100%; /*займет всю высоту окна, т.е. унаследует от контейнера с .stopScrolling с height 100vh*/
+    position: fixed; /*позволяет расположить и зафиксироватьв пределах видимой области*/
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+}
+.close { /*closing button*/
+    border: none;
+    color: white;
+    font-size: 7vmin;
+    position: relative;
+    bottom: 43vmin;
+    left: 2vmin;
+}
+.agentPage {
+    display: none;
+    height: 100vh;
+    color: white;
+    justify-content: space-evenly;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.activeAgent { /*стоит после .agentPage, т.к. последнее значение для display имеет больший приоритет*/
+    display: flex;
+}
+.agentPageOpacity { /*!*/
+    opacity: 1;
+}
+
+.agentPage button {
+    background-color: transparent;
+}
+
+.agentInfo {
+    height: 80%;
+    width: 40%;
+    justify-content: start;
+}
+.agentTitle {
+    margin: 0;
+    text-transform: uppercase;
+}
+.agentInfo p {
+    line-height: 2;
+}
+.agentInfo, .abilityCard {
+    display: flex;
+    flex-direction: column;
+}
+.agentRole img {
+    height: 19px;
+    width: 19px;
+}
+.country img {
+    width: 34px;
+    height: 25px;
+}
+.abilities {
+    display: flex;
+    justify-content: space-between;
+}
+.abilities button {
+    color: white;
+    border: none;
+    text-transform: uppercase;
+}
+
+.abilities img {
+    width: 82px;
+    height: 82px;
+}
+.abilityCard {
+    width: 30%;
+    padding: 1%;
+    text-align: center;
+    border: 1px solid;
+}
+.abilityCard h1 {
+    position: relative;
+    left: -4%;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.abilityCard p {
+    max-height: 100%;
+    line-height: 2;
+}
+.abilityCard img {
+    width: 42px;
+    height: 42px;
+}
+.abilityCard video {
+    max-width: 100%;
+    height: auto;
+}
+figure {
+    margin: 0;
+}
+.activeAbility { /* clicked ability*/
+    display: block;
+}
+#jett {
+    background-image: url(images/backgrounds/jettBackground.png);
+}
+#jett .agentTitle {
+    color:#6AB7C1;
+}
+#jett .abilityCard {
+    border-color: #6AB7C1;
+}
+#reyna {
+    background-image: url(images/backgrounds/reynaBackground.png);
+}
+#reyna .agentTitle {
+    color: #DA64E1;
+}
+#reyna .abilityCard {
+    border-color: #DA64E1;
+}
+
+#phoenix {
+    background-image: url(images/backgrounds/phoenixBackground.png);
+}
+
+#phoenix .agentTitle {
+    color: #FCE092;
+}
+#phoenix .abilityCard {
+    border-color: #FCE092;
+}
+#raze {
+    background-image: url(images/backgrounds/razeBackground.png);
+}
+
+#raze .agentTitle {
+    color: #CECEBB;
+}
+
+#raze .abilityCard {
+    border-color: #CECEBB;
+}
+#yoru {
+    background-image: url(images/backgrounds/yoruBackground.png);
+}
+
+#yoru .agentTitle {
+    color: #A49D9D;
+}
+
+#yoru .abilityCard {
+    border-color: #A49D9D;
+}
+
+#brimstone {
+    background-image: url(images/backgrounds/brimstoneBackground.png);
+}
+
+#brimstone .agentTitle {
+    color: #AFB2BE;
+}
+
+#brimstone .abilityCard {
+    border-color: #AFB2BE;
+}
+
+#viper {
+    background-image: url(images/backgrounds/viperBackground.png);
+}
+
+#viper .agentTitle {
+    color: #63BF4A;
+}
+
+#viper .abilityCard {
+    border-color: #63BF4A;
+}
+
+#omen {
+    background-image: url(images/backgrounds/omenBackground.png);
+}
+
+#omen .agentTitle {
+    color: #7577AF;
+}
+
+#omen .abilityCard {
+    border-color: #7577AF;
+}
+
+#astra {
+    background-image: url(images/backgrounds/astraBackground.png);
+}
+
+#astra .agentTitle {
+    color: #B362AC;
+}
+
+#astra .abilityCard {
+    border-color: #B362AC;
+}
+
+#sova {
+    background-image: url(images/backgrounds/sovaBackground.png);
+}
+
+#sova .agentTitle {
+    color: #D0CBC6;
+}
+
+#sova .abilityCard {
+    border-color: #D0CBC6;
+}
+
+#skye {
+    background-image: url(images/backgrounds/skyeBackground.png);
+}
+
+#skye .agentTitle {
+    color: #A8CDAB;
+}
+
+#skye .abilityCard {
+    border-color: #A8CDAB;
+}
+
+#breach {
+    background-image: url(images/backgrounds/breachBackground.png);
+}
+
+#breach .agentTitle {
+    color: #EDDB89;
+}
+
+#breach .abilityCard {
+    border-color: #EDDB89;
+}
+
+#kayo {
+    background-image: url(images/backgrounds/kayoBackground.png);
+}
+
+#kayo .agentTitle {
+    color: #6162CC;
+}
+
+#kayo .abilityCard {
+    border-color: #6162CC;
+}
+
+#killjoy {
+    background-image: url(images/backgrounds/kjBackground.png);
+}
+
+#killjoy .agentTitle {
+    color: #F5CE2C;
+}
+
+#killjoy .abilityCard {
+    border-color: #F5CE2C;
+}
+
+#sage {
+    background-image: url(images/backgrounds/sageBackground.png);
+}
+
+#sage .agentTitle {
+    color: #D9CFD8;
+}
+
+#sage .abilityCard {
+    border-color: #D9CFD8;
+}
+
+#cypher {
+    background-image: url(images/backgrounds/cypherBackground.png);
+}
+
+#cypher .agentTitle {
+    color: #D9CFD8;
+}
+
+#cypher .abilityCard {
+    border-color: #D9CFD8;
+}
+/*contacts*/
+#contacts {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+    padding: 5vh 0 5vh 0;
+}
+#contacts a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: all .5s ease-in-out;
+}
+#contacts a:hover {
+    color: #ff4454;
+}
+/* footer links */
+.footerTitle {
+    text-transform: uppercase;
+}
+#links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* footer icon */
+#links img {
+    width: 100px;
+    height: 100px;
+}
+
+/*Media*/
+/*Laptop*/
+@media screen and (min-width: 1024px) {
+    #burger, #burger i {
+        display: none;
+    }
+}
+/*Tablet*/
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    #burger, #burger i {
+        display: none;
+    }
+}
+/*Mobile*/
+@media screen and (max-width: 767px) {
+    .navbarList {
+        left: -100%;
+    }
+    .activeNavbarList {
+        left: 3%;
+    }
+    #burger {
+        position: absolute;
+        top: 10%;
+        left: 5%;
+        border: none;
+        background-color: transparent;
+    }
+    i {
+        color: white;
+    }
+}
