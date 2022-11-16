@@ -1,14 +1,19 @@
+/*
+font-family: 'Khand', sans-serif;
+font-family: 'Poiret One', cursive;
+font-family: 'Six Caps', sans-serif;
+*/
 body {
     margin: 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poiret One', cursive;
+    font-weight: 300;
     scroll-behavior: smooth;
     /*background: linear-gradient(138deg, rgba(23,36,54,1) 0%, rgba(27,46,71,1) 54%, rgba(48,106,166,1) 85%, rgba(48,105,163,1) 100%);*/
-    background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('addGuideImages/1264062.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    font-size: 0.8em;
+    /*background-color: #efeff0ff;*/
+    font-size: 1em;
+    color: white;
     overflow-x: hidden;
+    background-color: rgba(28,27,34,1);
 }
 /* Navbar */
 .navContainer {
@@ -20,7 +25,11 @@ body {
     transition: all .5s ease-in;
 }
 .navScrolled {
-    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+    /*background-image: linear-gradient(135deg, #0a4335 0%, #1c6732 100%);*/
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
 }
@@ -70,10 +79,14 @@ nav li a {
     margin-left: 5vw;
 }
 .signinButton {
+    font-family: 'Poiret One', cursive;
+    font-size: 0.9em;
+    font-weight: 600;
+    text-transform: uppercase;
     border-radius: 30px;
     width: 8vw;
     height: 5vh;
-    background-color: #8BC6EC;
+    background-color: #12b916;
     border: none;
     margin-right: 5vw;
     transition: all .5s ease-out;
@@ -85,10 +98,168 @@ nav li a {
 .signinButton:hover {
     background-color: transparent;
     background-image: none;
-    border: 2px solid #8BC6EC;
+    border: 2px solid #12b916;
 }
 .signinButton:hover .signinLink {
-    color: #8BC6EC;
+    color: #12b916;
+}
+
+/* PAGE BACKGROUND */
+.pageBackground {
+    margin: none;
+    height: 70vh;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('images/backgrounds/1149347.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 31%;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    box-shadow: 5px 5px 15px #000000;
+}
+
+/* SECTION */
+.content {
+    padding: 25vh 10vw 15vh 10vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+/* List of agents (carousel) */
+.agentList {
+    height: 80vh;
+    width: 30vw;
+    overflow-y: scroll;
+    list-style-type: none;
+    padding: 0;
+    scroll-behavior: smooth;
+    scrollbar-width: 0;
+    font-weight: 600;
+}
+.agentList::-webkit-scrollbar {
+    display: none;
+}
+.agentList li {
+    font-family: 'Khand', sans-serif;
+    text-transform: uppercase;
+    font-size: 3.5em;
+    font-weight: 600;
+    cursor: pointer;
+    padding-bottom: 5vh;
+    transition: all .5s ease-in-out;
+}
+.agentList li:hover {
+    color:#ff4454;
+}
+/* AGENT CARD */
+.agentCard {
+    width: fit-content;
+}
+/* ABOUT AGENT BLOCK */
+.agentAbout {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Agent full height image */
+.agentFullHeight {
+    height: 80vh;
+}
+/* Agent description (role, biography) */
+.agentDesc {
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-weight: 600;
+}
+/* Role, biography titles */
+.agentDesc h3 {
+    font-size: 2em;
+    text-transform: uppercase;
+    font-family: 'Khand', sans-serif;
+}
+/* Role name */
+.role {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2em;
+}
+/* role icon */
+.roleIcon {
+    width: 3.5vh;
+}
+/* Agent description */
+.agentDesc .description {
+    font-size: 1.3em;
+}
+.agentDesc hr {
+    width: inherit;
+    border: 1px solid white;
+}
+
+
+
+/* AGENT ABILITIES BLOCK */
+.agentAbilities {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100vw;
+}
+/* Ability wrapper */
+.abilityWrapper {
+    width: 40%;
+}
+/* Block title */
+.abilityWrapper h1 {
+    font-family: 'Khand', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 3.5em;
+}
+/* List of abilities */
+.abilityList {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+/* ability icon wrapper */
+.abilityEl {
+    cursor: pointer;
+    height: fit-content;
+    transition: all .5s ease-in-out;
+    border: 1px solid grey;
+    background: linear-gradient(to right, #ff4454, #ff4454 50%, transparent 50%);
+    background-size: 200% 100%;
+    background-position: 100%;
+}
+.abilityEl:hover {
+    background-position: 0 100%;
+    border-color: #ff4454;
+}
+/* ability icon */
+.abilityIcon {
+    padding: 5px;
+    height: 10vh;
+}
+/* ability title */
+.abilityTitle {
+    font-family: 'Khand', sans-serif;
+    font-size: 3em;
+}
+/* ability descriptiom */
+.abilityDesc {
+    width: 100%;
+    font-size: 1.3em;
+}
+/* Ability video */
+.videoWrapper {
+    width: 50%;
 }
 
 
@@ -100,7 +271,10 @@ nav li a {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
     padding: 5vh 0 5vh 0;
 }
 #contacts a {

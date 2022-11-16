@@ -5,10 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Font-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Pragati+Narrow&display=swap"
-    rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Khand:wght@300;600&family=Poiret+One&family=Six+Caps&display=swap" rel="stylesheet">
     <!--Icons-->
     <link href='https://css.gg/css' rel='stylesheet'>
     <!--CSS file-->
@@ -44,112 +43,99 @@
         </nav>
     </header>
 
-    <section id="content">
-        <div class="agentList">
-            <div class="agent">
-                <div class="agentAbout">
-                    <h1 class="agentName">
+    <section class="pageBackground">
 
+    </section>
+
+    <section class="content firstContentSection">
+        <ul class="agentList">
+            <li>Brimstone</li>
+            <li>Phoenix</li>
+            <li>Sage</li>
+            <li>Sova</li>
+            <li>Viper</li>
+            <li>Cypher</li>
+            <li>Reyna</li>
+            <li>Killjoy</li>
+            <li>Breach</li>
+            <li>Omen</li>
+            <li>Jett</li>
+            <li>Raze</li>
+            <li>Skye</li>
+            <li>Yoru</li>
+            <li>Astra</li>
+            <li>Kay/o</li>
+            <li>Chamber</li>
+            <li>Neon</li>
+            <li>Fade</li>
+            <li>Harbor</li>
+        </ul>
+        <!--gonna be displayed when an agent is chosen-->
+        <div class="agentCard">
+            <div class="agentAbout">
+                <img src="images/agentsFullHeight/brim.png" class="agentFullHeight">
+                <div class="agentDesc">
+                    <h3>
+                        //Role
+                    </h3>
+                    <h1 class="role">
+                        Controller
+                        <img src="images/rolesIcons/controllers.png" class ="roleIcon" alt="">
                     </h1>
-                    <img src="" alt="">
-                    <div class="agentDesc">
-                        <h3>
-                            Role
-                        </h3>
-                        <h1 class="role">
-                            Duelist
-                        </h1>
-                        <h3>
-                            Biography
-                        </h3>
-                        <p class="description">
-    
+                    <h3>
+                        //Biography
+                    </h3>
+                    <p class="description">
+                        Joining from the USA, Brimstone's orbital arsenal ensures his squad always has the advantage. His ability to deliver utility precisely and from a distance makes him an unmatched boots-on-the-ground commander.
+                    </p>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="content secondContentSection">
+        <div class="agentAbilities">
+            <div class="abilityWrapper">
+                <h1>
+                    Special abilities
+                </h1>
+                <ul class="abilityList">
+                    <!--<li class="ability">
+                        <img src="images/abilitiesIcons/brimstone/Incendiary.png" class="abilityIcon" alt="">
+                        <h2 class="abilityTitle">
+                            Q - Incendiary
+                        </h2>
+                        <p class="abilityDesc">
+                            EQUIP an incendiary grenade launcher. FIRE to launch a grenade that detonates as it comes to a rest on the floor, creating a lingering fire zone that damages players within the zone.
                         </p>
-                    </div>
-                </div>
-                <div class="agentAbilities">
-                    <div class="abilityWrapper">
-                        <h1>
-                            Special abilities
-                        </h1>
-                        <ul class="abilityList">
-                            <li>
-                                <img src="" class="abilityIcon" alt="">
-                                <h2 class="abilityTitle">
-
-                                </h2>
-                                <p class="abilityDesc">
-
-                                </p>
-                            </li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                    </div>
-                    <!--js-->
-                    <video src="" class="videoWrapper" autoplay loop muted>
-                        <source src="" type="video/mp4">
-                    </video>
+                    </li>-->
+                    <li class="abilityEl">
+                        <img src="images/abilitiesIcons/brimstone/Incendiary.png" class="abilityIcon" alt="">
+                    </li>
+                    <li class="abilityEl">
+                        <img src="images/abilitiesIcons/brimstone/Sky_Smoke.png" class="abilityIcon" alt="">
+                    </li>
+                    <li class="abilityEl">
+                        <img src="images/abilitiesIcons/brimstone/Stim_Beacon.png" class="abilityIcon" alt="">
+                    </li>
+                    <li class="abilityEl">
+                        <img src="images/abilitiesIcons/brimstone/Orbital_Strike.png" class="abilityIcon" alt="">
+                    </li>
+                </ul>
+                <!--js: data updates depending on the choice-->
+                <div class="abilityInfo">
+                    <h2 class="abilityTitle">
+                        Q - Incendiary
+                    </h2>
+                    <p class="abilityDesc">
+                        EQUIP an incendiary grenade launcher. FIRE to launch a grenade that detonates as it comes to a rest on the floor, creating a lingering fire zone that damages players within the zone.
+                    </p>
                 </div>
             </div>
-            <div class="agent">
-
-            </div>
-            <div class="agent">
-
-            </div>
-            <div class="agent">
-
-            </div>
-            <div class="agent">
-
-            </div>
-            <div class="agent">
-
-            </div>
-            <div class="agent">
-
-            </div>
-            <div class="agent">
-
-            </div>
-            <div class="agent">
-
-            </div>
-            <div class="agent">
-
-            </div>
-            <div class="agent">
-
-            </div>
-            <div class="agent">
-
-            </div>
-            <div class="agent">
-
-            </div>
-            <div class="agent">
-
-            </div>
-            <div class="agent">
-
-            </div>
-            <div class="agent">
-                
-            </div>
-            <div class="agent">
-
-            </div>
-            <div class="agent">
-
-            </div>
-            <div class="agent">
-
-            </div>
-            <div class="agent">
-
-            </div>
+            <!--js-->
+            <video class="videoWrapper" loop muted>
+                <source src="/videos/page1Background/page1Background.mp4" type="video/mp4">
+            </video>
         </div>
     </section>
 

@@ -8,7 +8,6 @@ let navbar = document.querySelector(".navContainer");
 window.addEventListener("scroll", () => {
     if (window.pageYOffset > navbar.offsetHeight) {
         navbar.classList.add("scrolledNav");
-        console.log(window.pageYOffset);
     } else if (navbar.classList.contains("scrolledNav") && window.pageYOffset === 0) {
         navbar.classList.remove("scrolledNav");
     }
