@@ -128,7 +128,7 @@ nav li a {
 /* List of agents (carousel) */
 .agentList {
     height: 80vh;
-    width: 30vw;
+    width: 50%;
     overflow-y: scroll;
     list-style-type: none;
     padding: 0;
@@ -164,7 +164,7 @@ nav li a {
 }
 /* Agent full height image */
 .agentFullHeight {
-    height: 80vh;
+    height: 60vh;
 }
 /* Agent description (role, biography) */
 .agentDesc {

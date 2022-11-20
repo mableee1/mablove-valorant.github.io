@@ -20,6 +20,7 @@ let agentFullHeight = document.querySelector('.agentFullHeight');
 let role = document.querySelector('.role');
 let roleIcon = document.querySelector('.roleIcon');
 let agentDescription = document.querySelector('.agentDesc .description');
+let abilityList = document.querySelector('.abilityList');
 console.log(role.firstChild)
 // data about a chosen agent from API
 function getAgent(agentName) {
@@ -39,12 +40,26 @@ function getAgent(agentName) {
                 roleIcon.src = item.role.displayIcon;
                 // agent's description
                 agentDescription.textContent = item.description;
+                // abilities
+                abilityList.childNodes.forEach((item) => {
+                    console.log(item);
+                    item.remove();
+                })
+                for (ability of item.abilities) {
+                    let abilityWrapper = document.createElement('li');
+                    abilityWrapper.classList.add('abilityEl');
+                    abilityList.append(abilityWrapper);
+                    let abilityIcon = document.createElement('img');
+                    abilityIcon.src = ability.displayIcon;
+                    abilityIcon.classList.add('abilityIcon');
+                    abilityWrapper.append(abilityIcon);
+                }
             }
         });
     })
     .catch(error => console.log('ERROR'));
+    return typeof item;
 }
-getAgent('Fade');
 // Menu on scroll
 // window.pageYOffset (scrolled distance from top)
 // window.pageXOffset (scrolled distance from left)
